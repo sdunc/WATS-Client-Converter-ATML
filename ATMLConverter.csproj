@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93CFD735-2869-43E1-AFB9-37348F04C608}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATMLConverter</RootNamespace>
+    <AssemblyName>ATMLConverter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Virinco.Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=dbc0e1bf149d1e88, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Converters.Standard, Version=6.1.0.95, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.WATS.Converters.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Interface.MES, Version=6.1.0.95, Culture=neutral, PublicKeyToken=25abfe255fd31fdf, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.WATS.Interface.MES.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Interface.TDM, Version=6.1.0.95, Culture=neutral, PublicKeyToken=25abfe255fd31fdf, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.WATS.Interface.TDM.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Service.MES.Contract, Version=6.1.0.95, Culture=neutral, PublicKeyToken=3e36107bb2aa2c24, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.WATS.Service.MES.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.WATS-Core, Version=6.1.0.95, Culture=neutral, PublicKeyToken=40e2cae0ae7be54b, processorArchitecture=MSIL">
+      <HintPath>packages\WATS.Client.6.1.95\lib\net472\Virinco.WATS.WATS-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATMLConverter.cs" />
+    <Compile Include="ConverterTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="schema\202\Common_TestResults.cs" />
+    <Compile Include="schema\50\Common_SimicaCommon_TestResults_TestResultsCollection_TestResultsTSExtension.cs" />
+    <Compile Include="schema\601\Common_SimicaCommon_TestResults_TestResultsCollection_TestResultsTSExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="schema\202\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\202\TestResults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\50\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\50\SimicaCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\50\TestResults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\50\TestResultsCollection.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\50\TestResultsTSExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\601\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\601\SimicaCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\601\TestResults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\601\TestResultsCollection.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\601\TestResultsTSExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Examples\ATML 2.02 [123456789][2 30 27 PM][5 15 2019].XML">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\ATML 5.00 [2 31 11 PM][5 15 2019].xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\ATML 6.01 [2 31 52 PM][5 15 2019].xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\Parallel Testing Strategies_BatchReport.6 45 31 AM..9 13 2022.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\Report_LS2621-1002[Passed][9190300075][2019-03-11][15 06 37].xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\TS2017_ATML2.02 - FATv1.XML">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\TS2017_ATML5.00 - FATv1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\TS2017_ATML6.01 - FATv1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\TS2021-FATv1_Report[1498.2141822][12_12_33][09.08.2022].xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

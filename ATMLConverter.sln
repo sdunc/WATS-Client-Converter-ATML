@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMLConverter", "ATMLConverter.csproj", "{93CFD735-2869-43E1-AFB9-37348F04C608}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93CFD735-2869-43E1-AFB9-37348F04C608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93CFD735-2869-43E1-AFB9-37348F04C608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93CFD735-2869-43E1-AFB9-37348F04C608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93CFD735-2869-43E1-AFB9-37348F04C608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3771D270-A4C3-4F9C-B384-9F1DC9571A92}
+	EndGlobalSection
+EndGlobal

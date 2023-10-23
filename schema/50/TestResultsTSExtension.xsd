@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="www.ni.com/TestStand/ATMLTestResults/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0" targetNamespace="www.ni.com/TestStand/ATMLTestResults/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="5.0.0">
+	<xs:import namespace="urn:IEEE-1671:2010:Common" schemaLocation="Common.xsd"/>
+	<xs:element name="TSStepProperties">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Stores TestStand specific step properties.</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="StepId" type="c:NonBlankString" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Unique id of the step. ( Locals.ResultList["Current Step"].TS.StepID )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StepType" type="c:NonBlankString">
+					<xs:annotation>
+						<xs:documentation>Name of the step type. ( Locals.ResultList["Current Step"].TS.StepType )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StepGroup" type="c:NonBlankString">
+					<xs:annotation>
+						<xs:documentation>Step group that contains the step. ( Locals.ResultList["Current Step"].TS.StepGroup )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="BlockLevel" type="c:unsignedInteger">
+					<xs:annotation>
+						<xs:documentation>Indicates the number of blocks that enclose the step. ( Locals.ResultList["Current Step"].TS.BlockLevel )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StepCausedSequenceFailure" type="c:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicates whether the failure of the step caused the sequence to fail. ( Locals.ResultList["Current Step"].TS.StepCausedSequenceFailure )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Index" type="c:unsignedInteger">
+					<xs:annotation>
+						<xs:documentation>Zero-based position of the step in the step group. ( Locals.ResultList["Current Step"].TS.Index )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="LoopingProperties" minOccurs="0">
+					<xs:complexType>
+						<xs:annotation>
+							<xs:documentation>Step properties that are added when a step is set to loop on itself.</xs:documentation>
+						</xs:annotation>
+						<xs:sequence>
+							<xs:element name="NumLoops" type="c:DatumType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Number of loops the step executed. ( Locals.ResultList["Current Step"].TS.NumLoops )</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="NumPassed" type="c:DatumType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Number of loops the step returned with a status of Passed. ( Locals.ResultList["Current Step"].TS.NumPassed )</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="NumFailed" type="c:DatumType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Number of loops the step returned with a status of Failed. ( Locals.ResultList["Current Step"].TS.NumFailed )</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:choice>
+								<xs:element name="EndingLoopIndex" type="c:DatumType">
+									<xs:annotation>
+										<xs:documentation>The loop index after executing the ending loop. ( Locals.ResultList["Current Step"].TS.EndingLoopIndex )</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="LoopIndex" type="c:DatumType">
+									<xs:annotation>
+										<xs:documentation>The value of the loop index for an iteration of the step. ( Locals.ResultList["Current Step"].TS.LoopIndex )</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RemoteServerId" type="c:NonBlankString" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Name of the remote host, if calling a subsequence on a remote computer. ( Locals.ResultList["Current Step"].TS.Server )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="InteractiveExecutionId" type="c:unsignedInteger" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Unique id assigned by TestStand on interactively executing a step. ( Locals.ResultList["Current Step"].TS.InteractiveExeNum )</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TotalTime" type="c:double" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicates total execution time of this step</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ModuleTime" type="c:double" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Time required to execute module associated with the step. (Locals.ResultsList["CurrenStep"].TS.Module Time</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TSResultSetProperties">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Stores result set properties.</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="IsPartialExecution" type="c:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicates whether a partial TPS is executed.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="NumOfResults" type="c:unsignedInteger">
+					<xs:annotation>
+						<xs:documentation>Indicates the number of step results processed.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TestSocketIndex" type="c:DatumType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identifies the test socket index.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="CriticalFailureStack" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This is used to put CriticalFailureStack of UUT corresponding to ResultSet</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CriticalFailureStackEntry" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Denotes induvidual entries in Ctrical Faulure Stack</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="resultID" type="xs:int" use="required">
+										<xs:annotation>
+											<xs:documentation>unique ID which refers to ID of tr:Test or tr:SessionAction element corresponding to TS Step</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="stepName" type="c:NonBlankString" use="required">
+										<xs:annotation>
+											<xs:documentation>TS Step Name of step which  is included in Critical Failure Stack</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="sequenceName" type="c:NonBlankString" use="required">
+										<xs:annotation>
+											<xs:documentation>Name of the sequence in which the TS Step is present</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="sequenceFileName" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Name of the sequence file in which the TS Step is present</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ResultListPresent" type="c:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This is set to true if ResultList is present but has no child elements and is set to false if ResultList is not present. In case ResultList is present and has child elements, this eleemnt will not be present.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TSRData" type="ts:TS_TSRData" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This is used to store offline processing information</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="BatchSerialNumber" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Used in case of BatcModel, TestUUTs entry point.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="value" type="c:NonBlankString"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ModuleTime" type="c:double" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicates execution time of this execution</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TSBatchTable">
+		<xs:annotation>
+			<xs:documentation>This type is to store BatchReport</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Stores BatchReport under TestResults extension.</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="ReportOptions" type="c:Collection">
+					<xs:annotation>
+						<xs:documentation>Stores ReportOptions used for this execution as collection </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UUTHref" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Used to store each UUT result and link</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="socketIndex" type="c:NonBlankString" use="required">
+							<xs:annotation>
+								<xs:documentation>This  is used to store socket index of UUT</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="uutResult" use="required">
+							<xs:annotation>
+								<xs:documentation>This  is used to indicate UUT status, allowed values are 'Passed', Failed', 'Done', 'Terminated and 'Unknown'</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Passed"/>
+									<xs:enumeration value="Failed"/>
+									<xs:enumeration value="Error"/>
+									<xs:enumeration value="Done"/>
+									<xs:enumeration value="Terminated"/>
+									<xs:enumeration value="Unknown"/>
+									<xs:enumeration value="Socket Execution Disabled"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="uutURI" type="xs:anyURI" use="required">
+							<xs:annotation>
+								<xs:documentation>Stores URI to path of UUT report</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="uutFileName" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Report File Name of UUT Report</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="anchorName" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>stores anchor value of UUT div element in UUT report</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="linkName" type="c:NonBlankString" use="required">
+							<xs:annotation>
+								<xs:documentation>Name used to display in UUT Report Link in Batch eport Table.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TSRData" type="ts:TS_TSRData" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Stores ReportOptions used for this execution as collection </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="batchSerialNumber" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>This indicates values of Batch SerialNumber.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="startDateTime" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>Indicates Date and Time when this batch started execution</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="stationID" type="c:NonBlankString" use="required">
+				<xs:annotation>
+					<xs:documentation>Used to store StationID of Station where test was executed</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="operator" type="c:NonBlankString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TSLimitProperties">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Stores TestStand Step Limit Properties</xs:documentation>
+			</xs:annotation>
+			<xs:all>
+				<xs:element name="IsTestMeasurement" type="c:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identifies whether it is a TestStand Step Measurement</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="IsComparisonTypeLog" type="c:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identifies whether TestStand Limit Comparison Type is set to 'No Comparison'.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TS_binary">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Binary and can be used to store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:binary">
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="TS_ArrayIndexor" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Base type: restriction of xs:string
+Properties: final restriction
+Regular expression: \[-?([0-9]+)((,(-?[0-9]+))*)\] (Restricts contents to a comma-delimited set of decimal numbers.)
+This type shall be used as the base type of any attribute or element that specifies the size of an array or the index of an element within an array. In use, attributes derived from this element shall contain a string designating an n-dimensional array index or array dimension, with the format [a,b,c,…,n], where a,b,c,…n are numeric indices. When a derived attribute specifies the size of an array, the attribute shall indicate the maximum size of each dimension of the array. When a derived attribute indicates a specific element of an array, the index value(s) shall be ordinal numbers with negative index allowed. Examples: (element index: [0] or [0,-1] or [2,-2,0]; maximum array index: [2,3] or [3,-3,3]). </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\[-?([0-9]+)((,(-?[0-9]+))*)\]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TS_BoundIndexor" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Base type: restriction of xs:string
+Properties: final restriction
+Regular expression: ((\[(-?[0-9]+)\])+)|(\[\])* (Restricts contents to a comma-delimited set of decimal numbers.)
+This type shall be used as the base type of any attribute or element that specifies the size of an array or the index of an element within an array. In use, attributes derived from this element shall contain a string designating an n-dimensional array index or array dimension, with the format [a,b,c,…,n], where a,b,c,…n are numeric indices. When a derived attribute specifies the size of an array, the attribute shall indicate the maximum size of each dimension of the array. When a derived attribute indicates a specific element of an array, the index value(s) shall be ordinal numbers with negative index allowed. Examples: (element index: [0] or [0][-1] or [2][-2][0]). </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="((\[(-?[0-9]+)\])+)|(\[\])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TS_boolean">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Boolean and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:boolean">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_Collection">
+		<xs:annotation>
+			<xs:documentation>The Collection complex type shall be the base type for XML schema elements intended to contain multiple data values, either unordered sets of values, ordered vectors of values (with the order of items in the vector being represented by the order of c:Collection/Item child elements) or collections of named values, also known as records (with the names being represented by the ‘name’ attribute of the c:Collection/Item child element).
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:Collection">
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_double">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Double and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:double">
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_hexadecimal">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Hexadecimal and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:hexadecimal">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_integer">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Integer and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:integer">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_octal">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:Octal and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:octal">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_string">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:String and can be used to store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:string">
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_unsignedInteger">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:UnsignedInteger and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:unsignedInteger">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_unsignedLong">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:UnsignedInteger and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:unsignedLong">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_long">
+		<xs:annotation>
+			<xs:documentation>This type is extension to c:UnsignedInteger and can be used to  store prop flags in case of attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:long">
+				<xs:attribute name="flags" type="c:HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>Stores Prop Flags of TestStand PropertyObject attribute</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NI_HyperlinkPath">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a file path hyperlinked in report</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ts:TS_string"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NI_TDMSReference">
+		<xs:annotation>
+			<xs:documentation>Used to represent an instance of NI_TDMSReference data type.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:Collection">
+				<xs:attribute name="flags" type="c:HexValue"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_binaryArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The binaryArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of binary values.Allows having propFlags and negative indices.
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:binary" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:binary
+Properties: isRef 0, content complex
+The binaryArray/DefaultElementValue child element shall contain the default binary value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:binary
+Properties: isRef 0, content complex
+The binaryArray/Element child element shall contain the binary value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:binary">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_booleanArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The booleanArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of boolean values.
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:boolean
+Properties: isRef 0, content complex
+The booleanArray/DefaultElementValue child element shall contain the default boolean value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:boolean
+Properties: isRef 0, content complex
+The booleanArray/Element child element shall contain the boolean value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:boolean">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_CollectionArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The CollectionArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of boolean values.
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:Collection" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:Collection
+Properties: isRef 0, content complex
+The CollectionArray/DefaultElementValue child element shall contain the default value of the collection array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:Collection
+Properties: isRef 0, content complex
+The CollectionArray/Element child element shall contain the value of the collection array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:Collection">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_doubleArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The doubleArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of numeric values that correspond to the IEEE 754 double precision 64-bit floating point type. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:double" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:double
+Properties: isRef 0, content complex
+The doubleArray/DefaultElementValue child element shall contain the default double precision 64-bit floating point value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:double
+Properties: isRef 0, content complex
+The doubleArray/Element child element shall contain the double precision 64-bit floating point value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:double">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_hexadecimalArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The hexadecimalArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of hex-encoded binary values. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:hexadecimal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:hexadecimal
+Properties: isRef 0, content complex
+The hexadecimalArray/DefaultElementValue child element shall contain the default hexadecimal value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:hexadecimal
+Properties: isRef 0, content complex
+The hexadecimalArray/Element child element shall contain the hexadecimal value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:hexadecimal">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_integerArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The integerArray complex type shall be the “xsi:type” of any element(s) of type c:IndexedArrayType that contain an array of 32-bit signed integer values. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:integer" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:integer
+Properties: isRef 0, content complex
+The integerArray/DefaultElementValue child element shall contain the default integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:integer
+Properties: isRef 0, content complex
+The integerArray/Element child element shall contain the integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:integer">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_octalArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The octalArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of octal-encoded binary values. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:octal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:octal
+Properties: isRef 0, content complex
+The octalArray/DefaultElementValue child element shall contain the default octal value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:octal
+Properties: isRef 0, content complex
+The octalArray/Element child element shall contain the octal value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:octal">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_stringArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The stringArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of string values. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:string
+Properties: isRef 0, content complex
+The stringArray/DefaultElementValue child element shall contain the default string value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:string
+Properties: isRef 0, content complex
+The stringArray/Element child element shall contain the string value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:string">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_unsignedIntegerArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The unsignedIntegerArray complex type shall be the “xsi:type” of any element of type c:IndexedArrayType that contains an array of unsigned integer values. 
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:unsignedInteger" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:unsignedInteger
+Properties: isRef 0, content complex
+The unsignedIntegerArray/DefaultElementValue child element shall contain the default unsigned integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:unsignedInteger
+Properties: isRef 0, content complex
+The unsignedIntegerArray/Element child element shall contain the unsigned integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:unsignedInteger">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_unsignedLongArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The unsignedLongArray complex type shall be the “xsi:type” for elements of type c:IndexedArrayType that contain an array of 32-bit unsigned integer values.
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:unsignedLong" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:unsignedLong
+Properties: isRef 0, content complex
+The unsignedLongArray/DefaultElementValue child element shall contain the default integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:unsignedLong
+Properties: isRef 0, content complex
+The unsignedLongArray/Element child element shall contain the integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:unsignedLong">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_longArray">
+		<xs:annotation>
+			<xs:documentation>Base type: Extension of c:IndexedArrayType
+Properties: base c:IndexedArrayType
+The longArray complex type shall be the “xsi:type” for elements of type c:IndexedArrayType that contain an array of 32-bit signed integer value.
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="c:long" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:long
+Properties: isRef 0, content complex
+The longArray/DefaultElementValue child element shall contain the default integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Base type: Extension of c:long
+Properties: isRef 0, content complex
+The longArray/Element child element shall contain the integer value of the array element.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="c:long">
+									<xs:attribute name="position" type="ts:TS_ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element value’s index within the array.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lowerBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="upperBounds" type="ts:TS_BoundIndexor" use="required"/>
+				<xs:attribute name="flags" type="c:HexValue" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TS_TSRData">
+		<xs:annotation>
+			<xs:documentation>This type is used to store the Offline Processing information.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="TSRFileName" type="c:NonBlankString" use="required"/>
+		<xs:attribute name="TSRFileID" type="c:NonBlankString" use="required"/>
+		<xs:attribute name="TSRFileClosed" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:element name="TSCollection">
+		<xs:annotation>
+			<xs:documentation>Used for ATML schema elements that contain multiple data values, either unordered sets of values, ordered vectors of values (with the order of items in the vector being represented by the order of Item child elements) or collections of named values, also known as “records” (with the names being represented by the ‘name’ attributes of Item child elements).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="c:Collection"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

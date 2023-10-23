@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by ROBERT SCOTT (NORTHROP GRUMMAN AMHERST SYSTEMS) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:c="http://www.ieee.org/ATML/2006/Common" xmlns="http://www.ieee.org/ATML/2007/TestResults" targetNamespace="http://www.ieee.org/ATML/2007/TestResults" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.02">
+	<xs:import namespace="http://www.ieee.org/ATML/2006/Common" schemaLocation="Common.xsd"/>
+	<xs:annotation>
+		<xs:documentation xml:lang="en">This schema is specified in IEEE 1636.1, "Trial-Use Standard Software Interface for Maintenance Information Collection and Analysis (SIMICA): Exchanging Test Results and Session Information via the Extensible Markup Language (XML)." This schema is a World Wide Web Consortium (W3C) Extensible Markup Language (XML) binding of the ATML component defined in IEEE IEEE 1636.1, "Trial Use Standard Software Interface for Maintenance Information Collection and Analysis (SIMICA): Exchanging Test Results and Session Information via the Extensible Markup Language (XML)."  The purpose of this schema is to allow the creation of IEEE 1636.1 instance documents. This schema uses the W3C XML Schema definition language as the encoding. This allows for interoperability and the exchange of ATML component instances between various systems. This schema shall not be modified but may be included in derivative works. Copyright (c) 2007 Institute of Electrical and Electronics Engineers, Inc. USE AT YOUR OWN RISK </xs:documentation>
+	</xs:annotation>
+	<xs:element name="TestResults">
+		<xs:annotation>
+			<xs:documentation>Root element for this schema.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="EnvironmentalData" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This element shall be used to contain environmental information pertinent to the subject test.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Environmental" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>External environmental data pertinent to the test instance.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="c:EnvironmentalElements">
+											<xs:attribute name="timeStamp" type="xs:dateTime" use="optional"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Indictments" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This is the parent element for an unbounded set of Indictment elements.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Indictment" type="c:ItemInstance" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Each Indictment element shall contain identifying information for the subcomponent of a tested UUT that is the most likely cause of a test failure.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="OtherData" type="c:NamedValue" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>This optional element shall be used to capture data that can not be expressed in the Indictment element structure.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Personnel">
+					<xs:annotation>
+						<xs:documentation>This branch shall be used to capture identifying information for personnel associated with the subject test session. At a minimum, SystemOperator is required.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CustomerRepresentative" type="Person" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Identification information for the customer representative witnessing or signing off the TestResults instance document.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="QualityAssurance" type="Person" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Identification information for the QA representative signing off the TestResults instance document.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="SystemOperator" type="Person">
+								<xs:annotation>
+									<xs:documentation>Identification information for the operator of the ATE.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PreTestRepairs" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identifies repairs made prior to a test or test run. Used in the diagnostic process.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Repair" type="Repair" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Identify the repair.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="References" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Collector element. If used, at least one Reference child element must appear in the instance document.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Reference" type="c:Document" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Miscellaneous reference information relevant to the overall set of Tests in an instance document.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ResultSet" type="TestGroup">
+					<xs:annotation>
+						<xs:documentation>Parent element to permit heirarchical structure of TestGroups.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TestDescription" type="c:ItemDescriptionReference" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Reference information to enable linkage to a specific 1671 TestDescription instance document.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TestProgram" type="c:SoftwareInstance" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Provides for the identification of a specific Test Program used for the subject Test Results.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TestStation" type="c:HardwareInstance" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Provides for the identification of a specific Test Station used for the subject Test Results.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UUT">
+					<xs:annotation>
+						<xs:documentation>The UUT upon which the test(s) is/are performed.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="c:ItemInstance">
+								<xs:attribute name="UutType" use="required">
+									<xs:simpleType>
+										<xs:restriction base="c:NonBlankString">
+											<xs:enumeration value="hardware"/>
+											<xs:enumeration value="software"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WorkOrder" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The reference ID of a Work Order related to or authorizing this test.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WorkItem" type="c:NamedValue" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Placeholder for specific Work Item(s) from the Work Order.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ID" type="c:NonBlankString" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Extension" type="c:Extension" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Element provided to permit extensibility of the schema.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:all>
+			<xs:attributeGroup ref="c:DocumentRootAttributes"/>
+			<xs:attribute name="name" type="c:NonBlankString" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="RepairCode">
+		<xs:annotation>
+			<xs:documentation>Enumeration of repair codes.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Repair"/>
+			<xs:enumeration value="Replace"/>
+			<xs:enumeration value="Reseat"/>
+			<xs:enumeration value="Alignment"/>
+			<xs:enumeration value="Software upgrade"/>
+			<xs:enumeration value="UserDefined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OutcomeValue">
+		<xs:annotation>
+			<xs:documentation>Simple enumeration to specify test outcomes Passed/Failed/Aborted.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Passed"/>
+			<xs:enumeration value="Failed"/>
+			<xs:enumeration value="Aborted"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Repair">
+		<xs:annotation>
+			<xs:documentation>Uses the enumerated RepairCode type to identify the type of repair conducted.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Component" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Identify the specific repaired component.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="c:ItemInstance">
+							<xs:sequence>
+								<xs:element name="Procedure" type="c:Document" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="repairCode" use="required">
+			<xs:simpleType>
+				<xs:restriction base="RepairCode"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="repairName" type="c:NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Outcome">
+		<xs:annotation>
+			<xs:documentation>Uses the enumerated OutcomeValue type to categorize a test or session action outcome.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="value" type="OutcomeValue" use="required"/>
+		<xs:attribute name="qualifier" type="c:NonBlankString" use="optional">
+			<xs:annotation>
+				<xs:documentation>The qualifier attribute may be used to expand upon the state indicated in the value attribute.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Event">
+		<xs:annotation>
+			<xs:documentation>Provides for the capture of non-result data or system/operator messages generated during a test.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Message" type="c:NonBlankString" nillable="false" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Any textual message associated with the Event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Data" type="c:NamedValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>When required, used to capture data value(s) associated with an Event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Reference" type="c:Document" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>When required, used to capture reference(s) to external items (e.g., documents)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ID" type="c:NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>A string value to uniquely identify an Event. Enforcement of uniqueness left to the user.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="c:NonBlankString" use="optional">
+			<xs:annotation>
+				<xs:documentation>An optional use-case defined name for the Event.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="severity" use="optional">
+			<xs:annotation>
+				<xs:documentation>0 - lowest severity; information only 4 - highest severity; critical event</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:enumeration value="0"/>
+					<xs:enumeration value="1"/>
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="3"/>
+					<xs:enumeration value="4"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="source" type="c:NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>Source of the recorded Event.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timeStamp" type="xs:dateTime" use="optional">
+			<xs:annotation>
+				<xs:documentation>Date/time of occurence of the Event.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Parameter">
+		<xs:annotation>
+			<xs:documentation>Provides for capture of test input parameters using a ValueType.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0">
+			<xs:element name="Description" type="c:NonBlankString" minOccurs="0"/>
+			<xs:element name="Data" type="c:Value" minOccurs="0"/>
+			<xs:element name="Reference" type="c:Document" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="ID" type="c:NonBlankString" use="required"/>
+		<xs:attribute name="name" type="c:NonBlankString" use="optional"/>
+		<xs:attribute name="timeStamp" type="xs:dateTime" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TestResult">
+		<xs:annotation>
+			<xs:documentation>Element sequence to capture test result data, comparison limits, components indicted in a failure and any data transforms required to evaluate raw capture data.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Outcome" type="Outcome" minOccurs="0"/>
+			<xs:element name="Description" type="c:NonBlankString" minOccurs="0"/>
+			<xs:element name="TestData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Captured data from the test equipment. This may be either raw or post-processed data. It is presumed that a Transform will be provided for raw data.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="c:Value">
+							<xs:attribute name="acquisitionTimeStamp" type="xs:dateTime" use="optional"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Transform" type="c:NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Any transform that might be needed to produce meaningful results from RawData.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Indictments" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Collector element. If used, at least one child Indictment must appear.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Indictment" type="c:ItemInstance" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Optional element to capture data about a component (item) suspected of contributing to an out-of-limit test result. </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TestLimits" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Collector element. If used, at least one child Limits element must appear.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Limits" type="c:Limit" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Limits against which TestData is compared to arrive at an Outcome. In an instance document, these limit values shall apply only to the TestResult branch containing this element.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Extension" type="c:Extension" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Provided to permit schema extensibility.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="ID" type="c:NonBlankString" use="required"/>
+		<xs:attribute name="name" type="c:NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TestGroup">
+		<xs:annotation>
+			<xs:documentation>A recursive structure permitting the grouping of related tests, test groups or session actions.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Test">
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="Test" type="Test">
+						<xs:annotation>
+							<xs:documentation>Shall contain information related to a single test.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TestGroup" type="TestGroup">
+						<xs:annotation>
+							<xs:documentation>Shall contain a related set of single Test elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SessionAction">
+						<xs:annotation>
+							<xs:documentation>Provides for the inclusion of actions occuring during the conduct of a test session that are not actual Results.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="Action">
+									<xs:sequence>
+										<xs:element name="ActionOutcome">
+											<xs:annotation>
+												<xs:documentation>Only "Done" and "Aborted" are permitted for the 'value' attribute. The 'qualifier' attribute may be used to further enhance 'value'.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="value" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Done"/>
+															<xs:enumeration value="Aborted"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="qualifier" type="c:NonBlankString" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Action" abstract="true">
+		<xs:sequence>
+			<xs:element name="Description" type="c:NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A textual description of the parent element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Events" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Collector element. If used, at least one child Event must appear.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Event" type="Event" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Used to capture any event related to the parent element. Events may be system or operator messages.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Parameters" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Collector element. If used, at least one child Parameter must appear.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Parameter" type="Parameter" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Optional storage for parameters associated with the parent Test or TestGroup element, as required.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Data" type="c:Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Container for any data related to the parent element, with the exception of actual captured results or any data for which another element is provided.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="c:Extension" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Provided to permit schema extensibility.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ID" type="c:NonBlankString" use="required"/>
+		<xs:attribute name="name" type="c:NonBlankString" use="optional"/>
+		<xs:attribute name="userDefinedType" type="c:NonBlankString" use="optional">
+			<xs:annotation>
+				<xs:documentation>A use-case defined string representing the "type" of the Test instance. Examples include "Pre-flight", "Calibration", "Post-repair", etc. The semantics of this "type" may be useful only to a document producer.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="cost" type="xs:double" use="optional"/>
+		<xs:attribute name="simulated" type="xs:boolean" use="optional"/>
+		<xs:attribute name="startDateTime" type="xs:dateTime" use="required"/>
+		<xs:attribute name="endDateTime" type="xs:dateTime" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Test">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:sequence>
+					<xs:element name="Outcome" type="Outcome">
+						<xs:annotation>
+							<xs:documentation>This Outcome applies to all element(s) sharing a common parent with this element.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Calibration" type="Parameter" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Optional calibration information for the test equipment used during a test documented by the parent element.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TestLimits" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Comparison limits that apply to all Test and/or TestGroup elements subordinate to the parent of this element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Limits" type="c:Limit" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>Limits against which TestData is compared to arrive at a testOutcome.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="TestResult" type="TestResult" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="securityClassification" type="c:NonBlankString" use="optional">
+					<xs:annotation>
+						<xs:documentation>Security classification level of the results of the specific Test in the instance document.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="entryPoint" type="xs:boolean" use="optional">
+					<xs:annotation>
+						<xs:documentation>Boolean indicating whether the Test instance is associated with a test program entry point.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="operatingMode" type="c:NonBlankString" use="optional">
+					<xs:annotation>
+						<xs:documentation>User-defined value describing the operating mode of the ATS for the specific instance of a Test.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Person">
+		<xs:annotation>
+			<xs:documentation>Identification information for a person.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:Operator">
+				<xs:sequence>
+					<xs:element name="Address" type="c:MailingAddress" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="affiliation" type="c:NonBlankString" use="optional"/>
+				<xs:attribute name="email" type="c:NonBlankString" use="optional"/>
+				<xs:attribute name="phone" type="c:NonBlankString" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

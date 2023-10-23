@@ -1,0 +1,4179 @@
+<?xml version="1.0" encoding="iso-8859-1" ?><?xml-stylesheet type="text/xsl" href="C:\Program Files (x86)\National Instruments\TestStand 2014\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl"?>
+
+<trc:TestResultsCollection xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+<trc:TestResults uuid="6f320e46-884a-43ff-b09e-b4e019e3db49" xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+	<tr:Personnel>
+		<tr:SystemOperator ID = "administrator" name = "administrator"/>
+	</tr:Personnel>
+	<tr:ResultSet ID="712" name = "C:\Test\P2\Test_P2_Access.seq#MainSequence" startDateTime = "2019-03-11T15:06:37.402" endDateTime = "2019-03-11T15:10:31.311">
+		<tr:Extension>
+			<ts:TSStepProperties>
+				<ts:StepType>SequenceCall</ts:StepType>
+				<ts:StepGroup>Main</ts:StepGroup>
+				<ts:BlockLevel value='1'/>
+				<ts:Index value='9'/>
+				<ts:TotalTime value='233.91'/>
+				<ts:ModuleTime value='233.908'/>
+			</ts:TSStepProperties>
+		</tr:Extension>
+		<tr:Outcome value="Passed" />
+		<tr:SessionAction ID = "713" name = "If" startDateTime = "2019-03-11T15:06:37.486"  endDateTime = "2019-03-11T15:06:37.486"  testReferenceID="ID#:GRJBseuEjkiHMEplegcFyB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{True}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='1'/>
+					<ts:TotalTime value='5.59e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "714" name = "StationInit" startDateTime = "2019-03-11T15:06:37.487"  endDateTime = "2019-03-11T15:06:37.487"  testReferenceID="ID#:K0m06S10YU+0xFSSc97wCC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='1.86e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "716" name = "End" startDateTime = "2019-03-11T15:06:37.491"  endDateTime = "2019-03-11T15:06:37.491"  testReferenceID="ID#:lmRZrQOFVES3KKJt0d/b1B">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='9'/>
+					<ts:TotalTime value='1.62e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "717" name = "Init" startDateTime = "2019-03-11T15:06:37.493"  endDateTime = "2019-03-11T15:06:37.493"  testReferenceID="ID#:90LlxptFykeO71+D4hR7+C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='10'/>
+					<ts:TotalTime value='2.25e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "718" name = "If" startDateTime = "2019-03-11T15:06:37.494"  endDateTime = "2019-03-11T15:06:37.494"  testReferenceID="ID#:mOzJ7F3y0UKxrClxZ46dBC">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{False}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='11'/>
+					<ts:TotalTime value='2.22e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "719" name = "Else" startDateTime = "2019-03-11T15:06:37.496"  endDateTime = "2019-03-11T15:06:37.496"  testReferenceID="ID#:hMbgWceIME+hyOtvQ76lzC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_Else</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='16'/>
+					<ts:TotalTime value='1.05e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "720" name = "PART_29084: Artikelnummer,Serienummer" startDateTime = "2019-03-11T15:06:37.498"  endDateTime = "2019-03-11T15:06:37.498"  testReferenceID="ID#:1eTGPFBBAkq4hgOHJomO0C">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "Variant (DP/SP)">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>SP</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "Motorns Artikelnummer">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>8542010</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "Motorns Serienummer">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>9190300075-0</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "Undre Motorns Artikelnummer (DP)">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value></c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "Undre Motorns Serienummer (DP)">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value></c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>AdditionalResults</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='17'/>
+					<ts:TotalTime value='9.3e-006'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "721" name = "End" startDateTime = "2019-03-11T15:06:37.502"  endDateTime = "2019-03-11T15:06:37.502"  testReferenceID="ID#:0Q+7w6CjB02rb5nggp73bA">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='18'/>
+					<ts:TotalTime value='1.47e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "722" name = "PLC - Open Session" startDateTime = "2019-03-11T15:06:38.008"  endDateTime = "2019-03-11T15:06:38.030"  testReferenceID="ID#:aAxGqVopB0i0QUSkuYBfYB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='20'/>
+					<ts:TotalTime value='0.0224321'/>
+					<ts:ModuleTime value='0.0223853'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "723" name = "TEQP_48613: ELR - Open Session" startDateTime = "2019-03-11T15:06:38.034"  endDateTime = "2019-03-11T15:06:45.718"  testReferenceID="ID#:LXrcXRSS90KSYWcRyIPy/D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='21'/>
+					<ts:TotalTime value='7.68414'/>
+					<ts:ModuleTime value='7.68407'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "724" name = "TEQP_24259: ELR - Sätt last Max Effekt" startDateTime = "2019-03-11T15:06:45.722"  endDateTime = "2019-03-11T15:06:45.732"  testReferenceID="ID#:uTxZMYWdwE+ak9N+1K6vEA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='22'/>
+					<ts:TotalTime value='0.0098899'/>
+					<ts:ModuleTime value='0.0098283'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "725" name = "TEQP_13482: ELR - Last av" startDateTime = "2019-03-11T15:06:45.736"  endDateTime = "2019-03-11T15:06:45.756"  testReferenceID="ID#:Exdi3skmv0umGcaNQDUcJA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='23'/>
+					<ts:TotalTime value='0.02035'/>
+					<ts:ModuleTime value='0.0202851'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "726" name = "Access - Open Session" startDateTime = "2019-03-11T15:06:45.760"  endDateTime = "2019-03-11T15:06:45.801"  testReferenceID="ID#:3sxje4/0CEC10/+uPiBsjB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='24'/>
+					<ts:TotalTime value='0.0412469'/>
+					<ts:ModuleTime value='0.0412024'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "727" name = "PLH250-P - Open Session" startDateTime = "2019-03-11T15:06:45.805"  endDateTime = "2019-03-11T15:06:46.027"  testReferenceID="ID#:3y95guGvwUicImkZz3LnsB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='25'/>
+					<ts:TotalTime value='0.222189'/>
+					<ts:ModuleTime value='0.222143'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "728" name = "TEQN_46482: PLH250-P - SET 0 VDC" startDateTime = "2019-03-11T15:06:46.030"  endDateTime = "2019-03-11T15:06:47.058"  testReferenceID="ID#:5EmIhIZPrUa0zC/i4hAK2C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='26'/>
+					<ts:TotalTime value='1.02821'/>
+					<ts:ModuleTime value='1.02812'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846692-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "-0.05" xsi:type="ts:TS_double" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum value = "-0.5" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum value = "0.5" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "729" name = "TEQP_47067: Kontrollera testbänkens 24 Vdc matning" startDateTime = "2019-03-11T15:06:50.114"  endDateTime = "2019-03-11T15:06:50.356"  testReferenceID="ID#:JbO40Wlt1UO0XgzbgH+0+B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='0.242281'/>
+					<ts:ModuleTime value='0.242163'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846693-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "24.2271576" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "V" value = "22" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "V" value = "25" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:TestGroup name="C:\Test\P2\Test_P2_Access.seq#SetMainPower" ID="730" callerName='Sätt Nätspänning 400 Vac' testReferenceID="ID#:w1aGgjcSPE2HfCcJoe4L2D" startDateTime = "2019-03-11T15:06:50.371"  endDateTime = "2019-03-11T15:07:00.669" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='4'/>
+					<ts:TotalTime value='10.2987'/>
+					<ts:ModuleTime value='10.2987'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Passed" />
+			<tr:Test ID = "731" name = "TEQP_15705: PLC - Lock" startDateTime = "2019-03-11T15:06:50.384"  endDateTime = "2019-03-11T15:06:50.402"  testReferenceID="ID#:cYPJ4/oVxUymkraJcHk2zB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+						<ts:TotalTime value='0.0175522'/>
+						<ts:ModuleTime value='0.0174089'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "732" name = "TEQP_16625: PLC - Vänta på svar" startDateTime = "2019-03-11T15:06:50.403"  endDateTime = "2019-03-11T15:06:52.404"  testReferenceID="ID#:jXRei1hxVka6DLPbyyQKEC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='1'/>
+						<ts:TotalTime value='2.00122'/>
+						<ts:ModuleTime value='2.00116'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "733" name = "TEQP_79603: PLC - Ställ trafo" startDateTime = "2019-03-11T15:06:52.405"  endDateTime = "2019-03-11T15:06:52.406"  testReferenceID="ID#:ET95cPo91kSWrVrvQ2f4+A">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='2'/>
+						<ts:TotalTime value='0.0007187'/>
+						<ts:ModuleTime value='0.000655'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "734" name = "TEQP_24479: PLC- Vänta på svar" startDateTime = "2019-03-11T15:06:52.410"  endDateTime = "2019-03-11T15:06:58.440"  testReferenceID="ID#:A05bRPoc7ka/QWzKYkphbA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='3'/>
+						<ts:TotalTime value='6.03065'/>
+						<ts:ModuleTime value='6.03059'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:SessionAction ID = "735" name = "Elite pro NET - Open Session" startDateTime = "2019-03-11T15:06:59.444"  endDateTime = "2019-03-11T15:06:59.459"  testReferenceID="ID#:SNrFLhDa50S4CMSGWoYydC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='5'/>
+						<ts:TotalTime value='0.0153385'/>
+						<ts:ModuleTime value='0.0152854'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "736" name = "Mät Nätspänning" startDateTime = "2019-03-11T15:06:59.461"  endDateTime = "2019-03-11T15:07:00.662"  testReferenceID="ID#:UWVrC4/pw0y3gXwQUgSKZC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='6'/>
+						<ts:TotalTime value='1.20136'/>
+						<ts:ModuleTime value='1.20131'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "737" name = "Elite pro NET Close Session" startDateTime = "2019-03-11T15:07:00.664"  endDateTime = "2019-03-11T15:07:00.665"  testReferenceID="ID#:vB4t6UvAMkKuqLZgZQHiaA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='7'/>
+						<ts:TotalTime value='0.0014818'/>
+						<ts:ModuleTime value='0.0014343'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+		</tr:TestGroup>
+		<tr:Test ID = "738" name = "TEQN_62055: Kontrollera nätspänning 400 Vac L1" startDateTime = "2019-03-11T15:07:00.687"  endDateTime = "2019-03-11T15:07:00.687"  testReferenceID="ID#:tZruBYb7IUearxxvQigJ1B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='5'/>
+					<ts:TotalTime value='0.000104'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846694-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "228.1753387451" xsi:type="ts:TS_double" nonStandardUnit="Vac" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Vac" value = "215" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "Vac" value = "240" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "739" name = "TEQN_95058: Kontrollera nätspänning 400 Vac L2" startDateTime = "2019-03-11T15:07:00.692"  endDateTime = "2019-03-11T15:07:00.692"  testReferenceID="ID#:/UJ3nI0IiUKUKN9gkTpQDC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='6'/>
+					<ts:TotalTime value='9.91e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846695-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "226.614730835" xsi:type="ts:TS_double" nonStandardUnit="Vac" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Vac" value = "215" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "Vac" value = "240" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "740" name = "TEQN_55613: Kontrollera nätspänning 400 Vac L3" startDateTime = "2019-03-11T15:07:00.702"  endDateTime = "2019-03-11T15:07:00.702"  testReferenceID="ID#:fk00H/nrB060HmuTtSZFfC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='7'/>
+					<ts:TotalTime value='6.43e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846696-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "227.9152374268" xsi:type="ts:TS_double" nonStandardUnit="Vac" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Vac" value = "215" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "Vac" value = "240" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "741" name = "Spänningsätt effektsteget i tommgång." startDateTime = "2019-03-11T15:07:00.725"  endDateTime = "2019-03-11T15:07:01.226"  testReferenceID="ID#:TFNT4cWlUUSOWqQE1gsSBC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='30'/>
+					<ts:TotalTime value='0.500936'/>
+					<ts:ModuleTime value='0.500896'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "742" name = "Elite pro NET - Open Session" startDateTime = "2019-03-11T15:07:03.236"  endDateTime = "2019-03-11T15:07:03.251"  testReferenceID="ID#:jFPRa2s2yEeZadsxlDP5RC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='32'/>
+					<ts:TotalTime value='0.0152069'/>
+					<ts:ModuleTime value='0.0151556'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "743" name = "Mät Ineffekt" startDateTime = "2019-03-11T15:07:03.255"  endDateTime = "2019-03-11T15:07:04.456"  testReferenceID="ID#:nbBrq3nrREaB2QrY0aO6RD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='33'/>
+					<ts:TotalTime value='1.20063'/>
+					<ts:ModuleTime value='1.20058'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "744" name = "Elite pro NET Close Session" startDateTime = "2019-03-11T15:07:04.460"  endDateTime = "2019-03-11T15:07:04.462"  testReferenceID="ID#:drXMVOQqHEyOsSasV6FabC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='34'/>
+					<ts:TotalTime value='0.001374'/>
+					<ts:ModuleTime value='0.0013289'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "745" name = "UUTN_77644: Kontrollerar effektförbrukning i tomgång" startDateTime = "2019-03-11T15:07:04.478"  endDateTime = "2019-03-11T15:07:04.478"  testReferenceID="ID#:BGAmwoLvMUWXUgNfc0jGWA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='38'/>
+					<ts:TotalTime value='0.0001517'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846697-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "125.9927393694" xsi:type="ts:TS_double" nonStandardUnit="W" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "W" value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "W" value = "250" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "746" name = "UUTP_43463: Access, TestMode" startDateTime = "2019-03-11T15:07:08.495"  endDateTime = "2019-03-11T15:07:08.762"  testReferenceID="ID#:lGyU7z3il06M3tS73ogW7B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='42'/>
+					<ts:TotalTime value='0.266212'/>
+					<ts:ModuleTime value='0.266114'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "747" name = "UUTP_95841: Hämta artikelnummer för CM kort" startDateTime = "2019-03-11T15:07:08.766"  endDateTime = "2019-03-11T15:07:09.266"  testReferenceID="ID#:OVkm1mPPWUitzhiTw55UUD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='43'/>
+					<ts:TotalTime value='0.500438'/>
+					<ts:ModuleTime value='0.500368'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "748" name = "UUTP_15564: Hämta serienummer för CM kort" startDateTime = "2019-03-11T15:07:09.270"  endDateTime = "2019-03-11T15:07:09.770"  testReferenceID="ID#:2BM7MEu4SEyzFGj10+72wC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='44'/>
+					<ts:TotalTime value='0.499955'/>
+					<ts:ModuleTime value='0.499839'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "749" name = "PART_25239: CM kort Artikelnummer,Serienummer" startDateTime = "2019-03-11T15:07:09.775"  endDateTime = "2019-03-11T15:07:09.775"  testReferenceID="ID#:pcifJ0Z4p0m5oItw9ULXYA">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "CM Artikelnummer">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>8002002-03</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "CM Serienummer">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>9190301211</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "CM ProduktID">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>10</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>AdditionalResults</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='45'/>
+					<ts:TotalTime value='4.54e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "750" name = "UUTP_69976: Get Firmware CM" startDateTime = "2019-03-11T15:07:09.787"  endDateTime = "2019-03-11T15:07:09.799"  testReferenceID="ID#:Dn5quZbaSE+nuYbaqy/+MB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='46'/>
+					<ts:TotalTime value='0.011466'/>
+					<ts:ModuleTime value='0.0113891'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "751" name = "UPFW_26645: Firmware CM" startDateTime = "2019-03-11T15:07:09.803"  endDateTime = "2019-03-11T15:07:09.803"  testReferenceID="ID#:kRvRK07fPk2nICbWJOR/AB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "Firmware LPC">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>11619002_3</c:Value>
+						</c:Datum>
+					</c:Item>
+					<c:Item name = "Firmware Radio">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x2000">
+							<c:Value>11618025_5</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>AdditionalResults</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='47'/>
+					<ts:TotalTime value='4.03e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "752" name = "If" startDateTime = "2019-03-11T15:07:09.814"  endDateTime = "2019-03-11T15:07:09.815"  testReferenceID="ID#:ynTs50BlTUGajEodO20TrA">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{False}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='48'/>
+					<ts:TotalTime value='0.0001232'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "753" name = "End" startDateTime = "2019-03-11T15:07:09.820"  endDateTime = "2019-03-11T15:07:09.821"  testReferenceID="ID#:6VHif3YQg0qRsdZijtKPkD">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='87'/>
+					<ts:TotalTime value='5.68e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "754" name = "UINP_46507: Message Popup - Anpassa laddarparametrar" startDateTime = "2019-03-11T15:07:09.829"  endDateTime = "2019-03-11T15:07:13.176"  testReferenceID="ID#:5Iw5H7ktuUSE5AjarnwfGA">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ButtonHit">
+						<c:Datum value = "1" xsi:type="ts:TS_double" flags = "0x2000"/>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>MessagePopup</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='88'/>
+					<ts:TotalTime value='3.34709'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "755" name = "Ersätt SerieNummer i parameterlista" startDateTime = "2019-03-11T15:07:13.182"  endDateTime = "2019-03-11T15:07:13.182"  testReferenceID="ID#:bXYFNiDIlkKdYQoxdG7H/D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='90'/>
+					<ts:TotalTime value='6.67e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "756" name = "Century - begränsa IacLimit för 3,2kW" startDateTime = "2019-03-11T15:07:13.185"  endDateTime = "2019-03-11T15:07:13.185"  testReferenceID="ID#:s/t4M9JP60mYgumSBnTnuC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='91'/>
+					<ts:TotalTime value='1.83e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:SessionAction ID = "757" name = "If" startDateTime = "2019-03-11T15:07:13.188"  endDateTime = "2019-03-11T15:07:13.188"  testReferenceID="ID#:JiRzvrH390y4ZK4hmA09vD">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{True}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='92'/>
+					<ts:TotalTime value='0.0001196'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "758" name = "Hämta anpassning" startDateTime = "2019-03-11T15:07:13.191"  endDateTime = "2019-03-11T15:07:15.721"  testReferenceID="ID#:jA5eDyvqKkCTIIBTzMXdqD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='93'/>
+					<ts:TotalTime value='2.53071'/>
+					<ts:ModuleTime value='2.53067'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "759" name = "Set Custom Parameters" startDateTime = "2019-03-11T15:07:15.729"  endDateTime = "2019-03-11T15:07:15.729"  testReferenceID="ID#:GwdLKv1zcU2m+X9D+94yGD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='94'/>
+					<ts:TotalTime value='0.0005453'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "760" name = "DubbelPack - halvera IdcLimit" startDateTime = "2019-03-11T15:07:15.739"  endDateTime = "2019-03-11T15:07:15.739"  testReferenceID="ID#:cD19PRY/60CpFgPVdfZKeB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='95'/>
+					<ts:TotalTime value='3.64e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "761" name = "UUTP_34154: Skicka anpassade parametrar" startDateTime = "2019-03-11T15:07:15.746"  endDateTime = "2019-03-11T15:07:28.103"  testReferenceID="ID#:uy/4t0sZU0WDCb4fOvJIrA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='96'/>
+					<ts:TotalTime value='12.3566'/>
+					<ts:ModuleTime value='12.3565'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "763" name = "End" startDateTime = "2019-03-11T15:07:28.113"  endDateTime = "2019-03-11T15:07:28.113"  testReferenceID="ID#:yfD0Up/IbUGJNJFHNbjlsC">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='103'/>
+					<ts:TotalTime value='6.22e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "764" name = "UUTP_85894: Access, Ställ in datum och tid." startDateTime = "2019-03-11T15:07:30.129"  endDateTime = "2019-03-11T15:07:30.405"  testReferenceID="ID#:7FhgTHA76ki0yj5CNiXcOC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='105'/>
+					<ts:TotalTime value='0.275854'/>
+					<ts:ModuleTime value='0.275776'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "765" name = "Ta bort spänningsmatningen till effektsteget." startDateTime = "2019-03-11T15:07:30.409"  endDateTime = "2019-03-11T15:07:30.910"  testReferenceID="ID#:D6P0lLYs+U6KERb2Li1DHD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='106'/>
+					<ts:TotalTime value='0.500779'/>
+					<ts:ModuleTime value='0.500729'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "766" name = "Spänningssätt effektsteget." startDateTime = "2019-03-11T15:07:35.918"  endDateTime = "2019-03-11T15:07:36.420"  testReferenceID="ID#:WQMwaW5E/EKGgVbT1USfmC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='108'/>
+					<ts:TotalTime value='0.501236'/>
+					<ts:ModuleTime value='0.501183'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "767" name = "UUTP_26711: Access, TestMode" startDateTime = "2019-03-11T15:07:38.428"  endDateTime = "2019-03-11T15:07:38.691"  testReferenceID="ID#:aZKux7GrbUGJoiUKbvShdD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='110'/>
+					<ts:TotalTime value='0.263533'/>
+					<ts:ModuleTime value='0.263458'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "768" name = "UUTS_44115: Access, Kontrollerar kortets parametrar" startDateTime = "2019-03-11T15:07:38.696"  endDateTime = "2019-03-11T15:07:39.792"  testReferenceID="ID#:kGd+LFNzrU+VMBhGaOT9KD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>StringValueTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='111'/>
+					<ts:TotalTime value='1.09627'/>
+					<ts:ModuleTime value='1.09616'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846698-4407-11e9-92a1-00133b0fade8" name = "String">
+				<tr:TestData>
+					<c:Datum xsi:type="ts:TS_string" flags = "0x2400">
+						<c:Value>90300075</c:Value>
+					</c:Datum>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:Expected comparator = "CIEQ">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>90300075</c:Value>
+							</c:Datum>
+						</c:Expected>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "769" name = "UUTN_61190: Kontrollera Laddningskurva" startDateTime = "2019-03-11T15:07:39.797"  endDateTime = "2019-03-11T15:07:39.797"  testReferenceID="ID#:DOLKLpfpRE6EhTp0iotS7C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='112'/>
+					<ts:TotalTime value='0.0001622'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d846699-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "44" xsi:type="ts:TS_double" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:Expected comparator = "EQ">
+							<c:Datum value = "44" xsi:type="ts:TS_double" flags = "0x0000"/>
+						</c:Expected>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "770" name = "If" startDateTime = "2019-03-11T15:07:39.805"  endDateTime = "2019-03-11T15:07:39.805"  testReferenceID="ID#:9lMRJAktc02iiDsKCQ7hlD">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{False}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='113'/>
+					<ts:TotalTime value='0.0001145'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "771" name = "End" startDateTime = "2019-03-11T15:07:39.813"  endDateTime = "2019-03-11T15:07:39.813"  testReferenceID="ID#:0U043tzxDUm011VxlLKSGD">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='118'/>
+					<ts:TotalTime value='5.35e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "772" name = "Om 120Vdc hoppa ut" startDateTime = "2019-03-11T15:07:39.835"  endDateTime = "2019-03-11T15:07:39.835"  testReferenceID="ID#:odcyJlKP0kqdfw2HyMNqHC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Goto</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='122'/>
+					<ts:TotalTime value='3.73e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:TestGroup name="C:\Test\P2\Test_P2_Access.seq#ICalibration" ID="773" callerName='Kalibrering av ström' testReferenceID="ID#:DUe/3LjURE+FeC2GJ0JYaC" startDateTime = "2019-03-11T15:07:39.846"  endDateTime = "2019-03-11T15:08:12.080" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='124'/>
+					<ts:TotalTime value='32.2342'/>
+					<ts:ModuleTime value='32.2342'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Passed" />
+			<tr:Test ID = "774" name = "UUTP_14097: Access - Styr ut 0%" startDateTime = "2019-03-11T15:07:39.871"  endDateTime = "2019-03-11T15:07:39.888"  testReferenceID="ID#:DW6qPX+9VEa00UB+40io9B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+						<ts:TotalTime value='0.0176207'/>
+						<ts:ModuleTime value='0.017478'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "775" name = "TEQP_96745: ELR - Sätt last Max Ström" startDateTime = "2019-03-11T15:07:39.896"  endDateTime = "2019-03-11T15:07:39.905"  testReferenceID="ID#:07Wa6QI2BkmRtG1xeEZ7OA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='6'/>
+						<ts:TotalTime value='0.0089143'/>
+						<ts:ModuleTime value='0.0088741'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "776" name = "TEQP_72836: ELR - Sätt last till konstant volt" startDateTime = "2019-03-11T15:07:39.906"  endDateTime = "2019-03-11T15:07:39.915"  testReferenceID="ID#:3pJmy/AlnEK3Dm3ETkvl7C">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='7'/>
+						<ts:TotalTime value='0.0089522'/>
+						<ts:ModuleTime value='0.0089143'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "777" name = "TEQP_74125: ELR - Last på" startDateTime = "2019-03-11T15:07:39.917"  endDateTime = "2019-03-11T15:07:39.934"  testReferenceID="ID#:N0PANzVgTkihfqqQlLRQwA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='8'/>
+						<ts:TotalTime value='0.017293'/>
+						<ts:ModuleTime value='0.0172536'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "778" name = "UUTP_22757: Access - PowerUnit On" startDateTime = "2019-03-11T15:07:39.936"  endDateTime = "2019-03-11T15:07:39.951"  testReferenceID="ID#:Cz4Y7+SuYkKHnxQPqY0a7D">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='9'/>
+						<ts:TotalTime value='0.0154176'/>
+						<ts:ModuleTime value='0.0153797'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "779" name = "UUTP_12170: Access - Styr ut Iset låg" startDateTime = "2019-03-11T15:07:39.958"  endDateTime = "2019-03-11T15:07:39.968"  testReferenceID="ID#:TqQGpz5ujESa1spibL1NCD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='12'/>
+						<ts:TotalTime value='0.009971'/>
+						<ts:ModuleTime value='0.0099347'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "780" name = "UUTN_77144: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:43.986"  endDateTime = "2019-03-11T15:07:43.997"  testReferenceID="ID#:g0s6bjv2SkqKQUL7DIjR2B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0113585'/>
+						<ts:ModuleTime value='0.0111851'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669a-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "21.029" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "781" name = "UUTN_43982: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:07:44.001"  endDateTime = "2019-03-11T15:07:44.502"  testReferenceID="ID#:vQlORlJXs0uqcp39KLkAHA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.500527'/>
+						<ts:ModuleTime value='0.500408'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669b-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "325" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "460" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "782" name = "UUTN_77144: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:45.528"  endDateTime = "2019-03-11T15:07:45.539"  testReferenceID="ID#:g0s6bjv2SkqKQUL7DIjR2B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0107179'/>
+						<ts:ModuleTime value='0.0105683'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669c-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "20.965" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "783" name = "UUTN_43982: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:07:45.541"  endDateTime = "2019-03-11T15:07:46.041"  testReferenceID="ID#:vQlORlJXs0uqcp39KLkAHA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.500159'/>
+						<ts:ModuleTime value='0.500038'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669d-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "323" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "460" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "784" name = "UUTN_77144: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:47.073"  endDateTime = "2019-03-11T15:07:47.084"  testReferenceID="ID#:g0s6bjv2SkqKQUL7DIjR2B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0111956'/>
+						<ts:ModuleTime value='0.0110451'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669e-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "20.997" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "785" name = "UUTN_43982: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:07:47.086"  endDateTime = "2019-03-11T15:07:47.586"  testReferenceID="ID#:vQlORlJXs0uqcp39KLkAHA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.500146'/>
+						<ts:ModuleTime value='0.500009'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d84669f-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "323" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "460" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "786" name = "UUTN_77144: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:48.617"  endDateTime = "2019-03-11T15:07:48.629"  testReferenceID="ID#:g0s6bjv2SkqKQUL7DIjR2B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0117995'/>
+						<ts:ModuleTime value='0.0116469'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a0-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "21.061" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "787" name = "UUTN_43982: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:07:48.631"  endDateTime = "2019-03-11T15:07:49.132"  testReferenceID="ID#:vQlORlJXs0uqcp39KLkAHA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.500898'/>
+						<ts:ModuleTime value='0.500774'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a1-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "325" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "460" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "788" name = "UUTN_77144: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:50.161"  endDateTime = "2019-03-11T15:07:50.173"  testReferenceID="ID#:g0s6bjv2SkqKQUL7DIjR2B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0110875'/>
+						<ts:ModuleTime value='0.0109306'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a2-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "21.125" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "789" name = "UUTN_43982: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:07:50.175"  endDateTime = "2019-03-11T15:07:50.675"  testReferenceID="ID#:vQlORlJXs0uqcp39KLkAHA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.50012'/>
+						<ts:ModuleTime value='0.499994'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a3-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "320" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "460" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "790" name = "Räkna ut meddelvärdet" startDateTime = "2019-03-11T15:07:50.718"  endDateTime = "2019-03-11T15:07:50.719"  testReferenceID="ID#:dwi/i6vLV06GO/OWsx1OgA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Statement</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='20'/>
+						<ts:TotalTime value='7.69e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "791" name = "UUTP_78682: Access - Styr ut Iset hög" startDateTime = "2019-03-11T15:07:50.729"  endDateTime = "2019-03-11T15:07:50.749"  testReferenceID="ID#:2vCCZQ/YvEKLFjtkfaQqMB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='22'/>
+						<ts:TotalTime value='0.0202106'/>
+						<ts:ModuleTime value='0.0201592'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "792" name = "UUTN_18187: ELR - Läs ström från last" startDateTime = "2019-03-11T15:07:53.756"  endDateTime = "2019-03-11T15:07:53.767"  testReferenceID="ID#:U0rMULM25EiK0Y/y02IhCC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='24'/>
+						<ts:TotalTime value='0.0115114'/>
+						<ts:ModuleTime value='0.0113465'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a4-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "84.636" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "793" name = "UUTP_28916: Access - Öka till uträknat Imax - Steg 1" startDateTime = "2019-03-11T15:07:53.825"  endDateTime = "2019-03-11T15:07:53.844"  testReferenceID="ID#:T2GSbga2J06z9rEXZw7NcB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='35'/>
+						<ts:TotalTime value='0.0194084'/>
+						<ts:ModuleTime value='0.0193099'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "794" name = "UUTP_65858: Access - Öka till uträknat Imax - Steg 2" startDateTime = "2019-03-11T15:07:54.852"  endDateTime = "2019-03-11T15:07:54.865"  testReferenceID="ID#:XgynJOxCo0C4oiKp1NDT0A">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='37'/>
+						<ts:TotalTime value='0.0131663'/>
+						<ts:ModuleTime value='0.0130885'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "795" name = "UUTP_95920: Access - Öka till uträknat Imax - Steg 3" startDateTime = "2019-03-11T15:07:55.874"  endDateTime = "2019-03-11T15:07:55.886"  testReferenceID="ID#:9yhAbphOT0Gz+ml526/BYD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='39'/>
+						<ts:TotalTime value='0.0115364'/>
+						<ts:ModuleTime value='0.0114558'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "796" name = "UUTP_88078: Access - Öka till uträknat Imax - Steg 4" startDateTime = "2019-03-11T15:07:56.895"  endDateTime = "2019-03-11T15:07:56.907"  testReferenceID="ID#:zyV3G9x4aUKdsZk5kSTfIC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='41'/>
+						<ts:TotalTime value='0.0121904'/>
+						<ts:ModuleTime value='0.0121147'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "797" name = "UUTP_25426: Access - Styr ut uträknat Imax" startDateTime = "2019-03-11T15:07:57.917"  endDateTime = "2019-03-11T15:07:57.927"  testReferenceID="ID#:xg6SumzOPk2VR5ofwhe7MC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='43'/>
+						<ts:TotalTime value='0.0104559'/>
+						<ts:ModuleTime value='0.0103823'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:SessionAction ID = "798" name = "Ke2701 - Läs ström från shunt" startDateTime = "2019-03-11T15:08:00.954"  endDateTime = "2019-03-11T15:08:01.192"  testReferenceID="ID#:MNciuiBM5EOlFFpC1paKGD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Mät över shunt">
+							<c:Datum value = "195.1174076423" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='48'/>
+						<ts:TotalTime value='0.23793'/>
+						<ts:ModuleTime value='0.237841'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "799" name = "UUTN_83554: ELR - Läs ström från last" startDateTime = "2019-03-11T15:08:01.197"  endDateTime = "2019-03-11T15:08:01.208"  testReferenceID="ID#:a4UfN250xEGLVQtDYW+IPB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='49'/>
+						<ts:TotalTime value='0.0111085'/>
+						<ts:ModuleTime value='0.0109673'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a5-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "190.493" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "800" name = "UUTN_55285: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:08:01.212"  endDateTime = "2019-03-11T15:08:01.712"  testReferenceID="ID#:FSIaW4KVrkiu2qlDSANOvC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='50'/>
+						<ts:TotalTime value='0.500104'/>
+						<ts:ModuleTime value='0.499984'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a6-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "1767" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "2500" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "801" name = "Ke2701 - Läs ström från shunt" startDateTime = "2019-03-11T15:08:02.737"  endDateTime = "2019-03-11T15:08:02.967"  testReferenceID="ID#:MNciuiBM5EOlFFpC1paKGD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Mät över shunt">
+							<c:Datum value = "194.8148269741" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='48'/>
+						<ts:TotalTime value='0.229755'/>
+						<ts:ModuleTime value='0.229669'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "802" name = "UUTN_83554: ELR - Läs ström från last" startDateTime = "2019-03-11T15:08:02.969"  endDateTime = "2019-03-11T15:08:02.980"  testReferenceID="ID#:a4UfN250xEGLVQtDYW+IPB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='49'/>
+						<ts:TotalTime value='0.0110553'/>
+						<ts:ModuleTime value='0.010909'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a7-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "190.605" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "803" name = "UUTN_55285: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:08:02.982"  endDateTime = "2019-03-11T15:08:03.482"  testReferenceID="ID#:FSIaW4KVrkiu2qlDSANOvC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='50'/>
+						<ts:TotalTime value='0.499849'/>
+						<ts:ModuleTime value='0.499732'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a8-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "1749" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "2500" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "804" name = "Ke2701 - Läs ström från shunt" startDateTime = "2019-03-11T15:08:04.512"  endDateTime = "2019-03-11T15:08:04.742"  testReferenceID="ID#:MNciuiBM5EOlFFpC1paKGD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Mät över shunt">
+							<c:Datum value = "195.1558276424" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='48'/>
+						<ts:TotalTime value='0.230237'/>
+						<ts:ModuleTime value='0.230151'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "805" name = "UUTN_83554: ELR - Läs ström från last" startDateTime = "2019-03-11T15:08:04.744"  endDateTime = "2019-03-11T15:08:04.755"  testReferenceID="ID#:a4UfN250xEGLVQtDYW+IPB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='49'/>
+						<ts:TotalTime value='0.0109448'/>
+						<ts:ModuleTime value='0.0107987'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466a9-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "191.07" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "806" name = "UUTN_55285: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:08:04.757"  endDateTime = "2019-03-11T15:08:05.257"  testReferenceID="ID#:FSIaW4KVrkiu2qlDSANOvC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='50'/>
+						<ts:TotalTime value='0.500058'/>
+						<ts:ModuleTime value='0.499941'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466aa-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "1748" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "2500" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "807" name = "Ke2701 - Läs ström från shunt" startDateTime = "2019-03-11T15:08:06.289"  endDateTime = "2019-03-11T15:08:06.519"  testReferenceID="ID#:MNciuiBM5EOlFFpC1paKGD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Mät över shunt">
+							<c:Datum value = "194.5856223063" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='48'/>
+						<ts:TotalTime value='0.230209'/>
+						<ts:ModuleTime value='0.230121'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "808" name = "UUTN_83554: ELR - Läs ström från last" startDateTime = "2019-03-11T15:08:06.521"  endDateTime = "2019-03-11T15:08:06.532"  testReferenceID="ID#:a4UfN250xEGLVQtDYW+IPB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='49'/>
+						<ts:TotalTime value='0.011061'/>
+						<ts:ModuleTime value='0.0109168'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466ab-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "190.822" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "809" name = "UUTN_55285: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:08:06.535"  endDateTime = "2019-03-11T15:08:07.035"  testReferenceID="ID#:FSIaW4KVrkiu2qlDSANOvC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='50'/>
+						<ts:TotalTime value='0.500074'/>
+						<ts:ModuleTime value='0.499953'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466ac-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "1752" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "2500" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "810" name = "Ke2701 - Läs ström från shunt" startDateTime = "2019-03-11T15:08:08.066"  endDateTime = "2019-03-11T15:08:08.295"  testReferenceID="ID#:MNciuiBM5EOlFFpC1paKGD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Mät över shunt">
+							<c:Datum value = "193.8258616358" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='48'/>
+						<ts:TotalTime value='0.229571'/>
+						<ts:ModuleTime value='0.229489'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "811" name = "UUTN_83554: ELR - Läs ström från last" startDateTime = "2019-03-11T15:08:08.297"  endDateTime = "2019-03-11T15:08:08.308"  testReferenceID="ID#:a4UfN250xEGLVQtDYW+IPB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='49'/>
+						<ts:TotalTime value='0.0110103'/>
+						<ts:ModuleTime value='0.0108679'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466ad-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "190.806" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum value = "210" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "812" name = "UUTN_55285: Access - Läs AD-värde från Imeas" startDateTime = "2019-03-11T15:08:08.310"  endDateTime = "2019-03-11T15:08:08.811"  testReferenceID="ID#:FSIaW4KVrkiu2qlDSANOvC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='50'/>
+						<ts:TotalTime value='0.500058'/>
+						<ts:ModuleTime value='0.499935'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466ae-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "1766" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "2500" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "813" name = "UUTP_12986: Access - Minska ISet" startDateTime = "2019-03-11T15:08:08.878"  endDateTime = "2019-03-11T15:08:08.885"  testReferenceID="ID#:yhAkDqgP90yKLeKGDROJTC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='57'/>
+						<ts:TotalTime value='0.0075902'/>
+						<ts:ModuleTime value='0.0075317'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "814" name = "UUTP_14771: Access - Minska ISet" startDateTime = "2019-03-11T15:08:09.892"  endDateTime = "2019-03-11T15:08:09.906"  testReferenceID="ID#:gkdudri6X0OeBkwGNTacHD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='59'/>
+						<ts:TotalTime value='0.0134872'/>
+						<ts:ModuleTime value='0.0134106'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "815" name = "UUTP_98065: Access - PowerUnit Off" startDateTime = "2019-03-11T15:08:10.914"  endDateTime = "2019-03-11T15:08:10.927"  testReferenceID="ID#:ZlaFyzl4qUO5571WoKc3oB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='61'/>
+						<ts:TotalTime value='0.0129593'/>
+						<ts:ModuleTime value='0.0128824'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "816" name = "UUTP_26188: Access - Styr ut 0%" startDateTime = "2019-03-11T15:08:10.932"  endDateTime = "2019-03-11T15:08:10.943"  testReferenceID="ID#:0HZlkjLAokSQb9B7JLlOyA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='62'/>
+						<ts:TotalTime value='0.0108754'/>
+						<ts:ModuleTime value='0.0107236'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:SessionAction ID = "817" name = "Beräkna skalfaktor" startDateTime = "2019-03-11T15:08:10.962"  endDateTime = "2019-03-11T15:08:10.962"  testReferenceID="ID#:JiFkxCTe2UyHpuvBPyM3sA">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "scaleFactor">
+							<c:Datum value = "0.08677085889571" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Statement</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='65'/>
+						<ts:TotalTime value='4.66e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "818" name = "UUTP_59122: Access - Skicka skalfaktor för ström" startDateTime = "2019-03-11T15:08:10.965"  endDateTime = "2019-03-11T15:08:12.075"  testReferenceID="ID#:wSskG+BkSk6SP7Ivds0gsB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='66'/>
+						<ts:TotalTime value='1.11034'/>
+						<ts:ModuleTime value='1.11028'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+		</tr:TestGroup>
+		<tr:TestGroup name="C:\Test\P2\Test_P2_Access.seq#UCalibration" ID="819" callerName='Kalibrering av spänning' testReferenceID="ID#:sIpxqDVBQkiFBbvIriaBdC" startDateTime = "2019-03-11T15:08:12.097"  endDateTime = "2019-03-11T15:08:30.1000" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='125'/>
+					<ts:TotalTime value='18.903'/>
+					<ts:ModuleTime value='18.9029'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Passed" />
+			<tr:Test ID = "820" name = "UUTP_33318: Access - PowerUnit Off" startDateTime = "2019-03-11T15:08:12.121"  endDateTime = "2019-03-11T15:08:12.140"  testReferenceID="ID#:+aoULH/M/UCA5cC9/E+0FD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+						<ts:TotalTime value='0.0192089'/>
+						<ts:ModuleTime value='0.0191717'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "821" name = "TEQP_46522: ELR - Sätt last till 14Vdc" startDateTime = "2019-03-11T15:08:16.142"  endDateTime = "2019-03-11T15:08:16.154"  testReferenceID="ID#:zMQdnNawHkaf4xZxYWnssD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='2'/>
+						<ts:TotalTime value='0.0112819'/>
+						<ts:ModuleTime value='0.0112086'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "822" name = "TEQP_96653: ELR - Sätt last till 0.5A" startDateTime = "2019-03-11T15:08:16.155"  endDateTime = "2019-03-11T15:08:16.166"  testReferenceID="ID#:SrTFlQoj30KNoLBjrG0liD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='3'/>
+						<ts:TotalTime value='0.0103469'/>
+						<ts:ModuleTime value='0.010279'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "823" name = "TEQP_23073: ELR - Last - TILL" startDateTime = "2019-03-11T15:08:16.167"  endDateTime = "2019-03-11T15:08:16.189"  testReferenceID="ID#:Enbq3OlNAEK9hCADmbcccA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='4'/>
+						<ts:TotalTime value='0.0212913'/>
+						<ts:ModuleTime value='0.0212207'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "824" name = "TEQN_48551: PLH250-P - Ställ in motspänning till 12Vdc" startDateTime = "2019-03-11T15:08:16.190"  endDateTime = "2019-03-11T15:08:17.212"  testReferenceID="ID#:SERAViDxoUGcYQjse9mSdB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='5'/>
+						<ts:TotalTime value='1.02133'/>
+						<ts:ModuleTime value='1.02123'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466af-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "11.97" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum nonStandardUnit = "V" value = "11" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum nonStandardUnit = "V" value = "13" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "825" name = "Anslut motspänning" startDateTime = "2019-03-11T15:08:17.216"  endDateTime = "2019-03-11T15:08:17.717"  testReferenceID="ID#:hgLPuCPGo0G9WWJKSyyy7B">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='6'/>
+						<ts:TotalTime value='0.500301'/>
+						<ts:ModuleTime value='0.50025'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "826" name = "UUTN_14142: ELR - Läs spänning från last (Låg nivå)" startDateTime = "2019-03-11T15:08:22.732"  endDateTime = "2019-03-11T15:08:22.743"  testReferenceID="ID#:AeQRzR7FdkSm+zmVyfzIAD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='9'/>
+						<ts:TotalTime value='0.0111746'/>
+						<ts:ModuleTime value='0.0110481'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b0-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "11.397" xsi:type="ts:TS_double" nonStandardUnit="Vdc" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "LE">
+								<c:Datum nonStandardUnit = "Vdc" value = "14" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "827" name = "UUTN_16943: Access - Läs AD-värde från Umeas (Låg nivå)" startDateTime = "2019-03-11T15:08:22.748"  endDateTime = "2019-03-11T15:08:23.248"  testReferenceID="ID#:/YoZPW2Ymky2xTpGGWreJA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='10'/>
+						<ts:TotalTime value='0.500243'/>
+						<ts:ModuleTime value='0.500127'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b1-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "905" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "200" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "1200" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "828" name = "Koppla ifrån motspänning 12Vdc" startDateTime = "2019-03-11T15:08:23.254"  endDateTime = "2019-03-11T15:08:23.754"  testReferenceID="ID#:Vk4kQvNubESZ23sodU9CQC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='11'/>
+						<ts:TotalTime value='0.50076'/>
+						<ts:ModuleTime value='0.500706'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "829" name = "TEQP_33544: ELR - Sätt last till Uut* 1.2+2 Vdc" startDateTime = "2019-03-11T15:08:23.759"  endDateTime = "2019-03-11T15:08:23.770"  testReferenceID="ID#:PQjSNc90C0OSsOvZDvm7sC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='12'/>
+						<ts:TotalTime value='0.0109219'/>
+						<ts:ModuleTime value='0.0108468'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "830" name = "TEQP_37501: PLH250-P - Ställ in motspänning til  Uut* 1.2 Vdc" startDateTime = "2019-03-11T15:08:23.775"  endDateTime = "2019-03-11T15:08:24.798"  testReferenceID="ID#:mI7nduCosE+AlCCMoVGBPA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='13'/>
+						<ts:TotalTime value='1.023'/>
+						<ts:ModuleTime value='1.02287'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b2-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "28.77" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum nonStandardUnit = "V" value = "27.648" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum nonStandardUnit = "V" value = "29.952" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "831" name = "Anslut motspänning" startDateTime = "2019-03-11T15:08:24.803"  endDateTime = "2019-03-11T15:08:25.304"  testReferenceID="ID#:dBTrDq+ACk2iKKJwyL4O/A">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='14'/>
+						<ts:TotalTime value='0.50103'/>
+						<ts:ModuleTime value='0.500976'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "832" name = "UUTN_87690: ELR - Läs spänning från last (Hög nivå)" startDateTime = "2019-03-11T15:08:29.314"  endDateTime = "2019-03-11T15:08:29.325"  testReferenceID="ID#:V56e3r3E0UKZssSgs1jUMB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='16'/>
+						<ts:TotalTime value='0.0106933'/>
+						<ts:ModuleTime value='0.0105446'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b3-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "28.172" xsi:type="ts:TS_double" nonStandardUnit="Vdc" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum nonStandardUnit = "Vdc" value = "27.648" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum nonStandardUnit = "Vdc" value = "29.952" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "833" name = "UUTN_16476: Access - Läs AD-värde från Umeas (Hög nivå)" startDateTime = "2019-03-11T15:08:29.330"  endDateTime = "2019-03-11T15:08:29.830"  testReferenceID="ID#:Bm9EdJS7aU+YRbMkOrPGKC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='0.500401'/>
+						<ts:ModuleTime value='0.500281'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b4-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "2245" xsi:type="ts:TS_double" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum value = "5000" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "834" name = "Beräkna skalfaktor" startDateTime = "2019-03-11T15:08:29.844"  endDateTime = "2019-03-11T15:08:29.844"  testReferenceID="ID#:LJnCXoNQW0mOSkNV5skwdD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "Skalfaktor U">
+							<c:Datum value = "0.009171678512849" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Statement</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='19'/>
+						<ts:TotalTime value='7.78e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "835" name = "UUTP_17037: Access - Skicka skalfaktor för spänning" startDateTime = "2019-03-11T15:08:29.852"  endDateTime = "2019-03-11T15:08:30.960"  testReferenceID="ID#:VB95KKRJzkC7Yza1dcXHsB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='20'/>
+						<ts:TotalTime value='1.10843'/>
+						<ts:ModuleTime value='1.10835'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+		</tr:TestGroup>
+		<tr:SessionAction ID = "836" name = "Koppla ifrån motspänning Uut* 1.2 Vdc" startDateTime = "2019-03-11T15:08:31.014"  endDateTime = "2019-03-11T15:08:31.515"  testReferenceID="ID#:H5JpmctvtUWxjJHH1S1cNB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='126'/>
+					<ts:TotalTime value='0.500902'/>
+					<ts:ModuleTime value='0.50085'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "837" name = "TEQP_33544: ELR - Sätt last till Uut+2 Vdc" startDateTime = "2019-03-11T15:08:31.518"  endDateTime = "2019-03-11T15:08:31.529"  testReferenceID="ID#:0twn5X+ePUiqxuFBZFtNDC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='127'/>
+					<ts:TotalTime value='0.0103478'/>
+					<ts:ModuleTime value='0.0102799'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "838" name = "TEQP_19959: PLH250-P - Ställ in motspänning til  Uut" startDateTime = "2019-03-11T15:08:31.532"  endDateTime = "2019-03-11T15:08:32.556"  testReferenceID="ID#:MEf7ZWrDL0qiWvI+0L3dUA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='128'/>
+					<ts:TotalTime value='1.02335'/>
+					<ts:ModuleTime value='1.02322'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466b5-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "23.97" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "V" value = "23.04" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "V" value = "24.96" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "839" name = "Anslut motspänning" startDateTime = "2019-03-11T15:08:32.560"  endDateTime = "2019-03-11T15:08:33.061"  testReferenceID="ID#:9LBGQzFuqkSgW+feGoyLlC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='129'/>
+					<ts:TotalTime value='0.500657'/>
+					<ts:ModuleTime value='0.500604'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "840" name = "Ke2701 - Mät utspänning" startDateTime = "2019-03-11T15:08:39.069"  endDateTime = "2019-03-11T15:08:39.307"  testReferenceID="ID#:BtCf3BxdWkGaNzPUYK1ElB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "Volt Ke2701">
+						<c:Datum value = "23.3771076" xsi:type="ts:TS_double" flags = "0x2000"/>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='131'/>
+					<ts:TotalTime value='0.238598'/>
+					<ts:ModuleTime value='0.238546'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "841" name = "Access - Läs batterispänning" startDateTime = "2019-03-11T15:08:39.312"  endDateTime = "2019-03-11T15:08:39.812"  testReferenceID="ID#:4HN7bvnJI0upTqNDvgA5RB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "umeasBat CM">
+						<c:Datum value = "23295" xsi:type="ts:TS_double" flags = "0x2000"/>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='132'/>
+					<ts:TotalTime value='0.500818'/>
+					<ts:ModuleTime value='0.500762'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "842" name = "UUTN_85043: Kontrollera spänning" startDateTime = "2019-03-11T15:08:39.817"  endDateTime = "2019-03-11T15:08:39.817"  testReferenceID="ID#:XAY6orBTuUytxaPDQr3tXB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='133'/>
+					<ts:TotalTime value='0.0002289'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466b6-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "23.295" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "V" value = "22.909565448" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "V" value = "23.844649752" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "843" name = "Koppla ifrån motspänning" startDateTime = "2019-03-11T15:08:39.823"  endDateTime = "2019-03-11T15:08:40.324"  testReferenceID="ID#:z0XuYRQshEGkmyHXcXHBOB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='134'/>
+					<ts:TotalTime value='0.501132'/>
+					<ts:ModuleTime value='0.501082'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "844" name = "Ta bort spänningsmatningen till effektsteget." startDateTime = "2019-03-11T15:08:40.335"  endDateTime = "2019-03-11T15:08:40.836"  testReferenceID="ID#:5Ig5TktrG020Vbp0QGR2jA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='136'/>
+					<ts:TotalTime value='0.501255'/>
+					<ts:ModuleTime value='0.501205'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "845" name = "TEQP_35472: ELR - Sätt last till konstant volt till 0.1 x Uut" startDateTime = "2019-03-11T15:08:42.874"  endDateTime = "2019-03-11T15:08:42.885"  testReferenceID="ID#:i0dAr6NMj0STztl4aPVzFB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='142'/>
+					<ts:TotalTime value='0.010888'/>
+					<ts:ModuleTime value='0.0108135'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "846" name = "Spänningssätt effektsteget." startDateTime = "2019-03-11T15:08:44.893"  endDateTime = "2019-03-11T15:08:45.394"  testReferenceID="ID#:oC+5crD3uUybIrA4AKueEA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='144'/>
+					<ts:TotalTime value='0.500485'/>
+					<ts:ModuleTime value='0.500424'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "847" name = "UINP_16555: Kontrollera klockan" startDateTime = "2019-03-11T15:08:45.398"  endDateTime = "2019-03-11T15:08:54.641"  testReferenceID="ID#:2dGql90YpE2ydJsw0+5EQB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>MessagePopup</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='145'/>
+					<ts:TotalTime value='9.24239'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466b7-4407-11e9-92a1-00133b0fade8" name = "ButtonHit">
+				<tr:TestData>
+					<c:Datum value = "1" xsi:type="ts:TS_double" flags = "0x2000"/>
+				</tr:TestData>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "848" name = "TEQP_98466: ELR - Sätt last Max Ström" startDateTime = "2019-03-11T15:08:54.652"  endDateTime = "2019-03-11T15:08:54.660"  testReferenceID="ID#:pbIcgNQUYUyTUtFG+mDgQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='151'/>
+					<ts:TotalTime value='0.0081584'/>
+					<ts:ModuleTime value='0.0081293'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "849" name = "TEQP_43917: ELR - Sätt last till konstant volt till 0.98 x Uut" startDateTime = "2019-03-11T15:08:54.662"  endDateTime = "2019-03-11T15:08:54.670"  testReferenceID="ID#:B23tHX0D10GhhgEboOBlQD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='152'/>
+					<ts:TotalTime value='0.0084306'/>
+					<ts:ModuleTime value='0.0084033'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "850" name = "TEQP_90355: ELR - Last på" startDateTime = "2019-03-11T15:08:54.671"  endDateTime = "2019-03-11T15:08:54.686"  testReferenceID="ID#:G7itQRGnGUSvJn10Y9JRQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='153'/>
+					<ts:TotalTime value='0.0149335'/>
+					<ts:ModuleTime value='0.0148813'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "851" name = "TEQP_42667: PLH250-P - Ställ in motspänning tilt Uut*1.1 Vdc" startDateTime = "2019-03-11T15:08:54.690"  endDateTime = "2019-03-11T15:08:55.712"  testReferenceID="ID#:17h0sq1UpECcQ147z+qQOC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='155'/>
+					<ts:TotalTime value='1.02244'/>
+					<ts:ModuleTime value='1.02233'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466b8-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "26.37" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "V" value = "25.44" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "V" value = "27.36" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "852" name = "Anslut motspänning" startDateTime = "2019-03-11T15:08:55.717"  endDateTime = "2019-03-11T15:08:56.218"  testReferenceID="ID#:dCKi9ZP2NEKLW1XJbcOs4D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='156'/>
+					<ts:TotalTime value='0.501255'/>
+					<ts:ModuleTime value='0.501203'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:TestGroup name="C:\Test\P2\Test_P2_Access.seq#RemoteStart" ID="853" callerName='Remote Start' testReferenceID="ID#:025fK53z4EqmJlvGGBJXsD" startDateTime = "2019-03-11T15:08:56.229"  endDateTime = "2019-03-11T15:09:15.268" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='158'/>
+					<ts:TotalTime value='19.0387'/>
+					<ts:ModuleTime value='19.0386'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Passed" />
+			<tr:SessionAction ID = "854" name = "UINP_90794: Message Popup - Remote Start Alternativ" startDateTime = "2019-03-11T15:08:56.251"  endDateTime = "2019-03-11T15:09:02.151"  testReferenceID="ID#:3A0e0F+0fUeFXgptVTJIDA">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ButtonHit">
+							<c:Datum value = "1" xsi:type="ts:TS_double" flags = "0x2000"/>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>MessagePopup</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+						<ts:TotalTime value='5.90016'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "855" name = "If" startDateTime = "2019-03-11T15:09:02.152"  endDateTime = "2019-03-11T15:09:02.152"  testReferenceID="ID#:WiAgiSuvYEeaxYZA+NJKrD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>{True}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_If</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='1'/>
+						<ts:TotalTime value='6.07e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "856" name = "UINP_61510: Kontrollera Remote Start Display" startDateTime = "2019-03-11T15:09:02.154"  endDateTime = "2019-03-11T15:09:07.408"  testReferenceID="ID#:2eELcMzGc0i96PZuDfxqUA">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>MessagePopup</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='2'/>
+						<ts:TotalTime value='5.25434'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466b9-4407-11e9-92a1-00133b0fade8" name = "ButtonHit">
+					<tr:TestData>
+						<c:Datum value = "1" xsi:type="ts:TS_double" flags = "0x2000"/>
+					</tr:TestData>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "857" name = "Aktivera Remote Start." startDateTime = "2019-03-11T15:09:07.410"  endDateTime = "2019-03-11T15:09:07.910"  testReferenceID="ID#:rs7yaKJ1ZEebe/g3smnegC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='3'/>
+						<ts:TotalTime value='0.500739'/>
+						<ts:ModuleTime value='0.500687'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "858" name = "UINP_15183: Kontrollera Remote Start" startDateTime = "2019-03-11T15:09:07.912"  endDateTime = "2019-03-11T15:09:15.250"  testReferenceID="ID#:n6vCwHuhA0OlgZQw0tZ3lD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>MessagePopup</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='4'/>
+						<ts:TotalTime value='7.33736'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466ba-4407-11e9-92a1-00133b0fade8" name = "ButtonHit">
+					<tr:TestData>
+						<c:Datum value = "1" xsi:type="ts:TS_double" flags = "0x2000"/>
+					</tr:TestData>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "860" name = "End" startDateTime = "2019-03-11T15:09:15.258"  endDateTime = "2019-03-11T15:09:15.258"  testReferenceID="ID#:tGlSHYb2mU2Ec0Ogr+0hZD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>(If)</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_End</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='13'/>
+						<ts:TotalTime value='6.4e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+		</tr:TestGroup>
+		<tr:Test ID = "861" name = "TEQP_66122: ELR - Sätt last till konstant Volt till Uut" startDateTime = "2019-03-11T15:09:15.283"  endDateTime = "2019-03-11T15:09:15.292"  testReferenceID="ID#:4JTM3Y1fO0esmmSgaziuTC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='164'/>
+					<ts:TotalTime value='0.0085331'/>
+					<ts:ModuleTime value='0.008491'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "862" name = "Stoppa motspänning Uut Vdc" startDateTime = "2019-03-11T15:09:16.300"  endDateTime = "2019-03-11T15:09:16.801"  testReferenceID="ID#:k3YIKbZpH0ScI4e9J0bpLC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='166'/>
+					<ts:TotalTime value='0.501032'/>
+					<ts:ModuleTime value='0.500977'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test name="Airpump" ID="863" testReferenceID="ID#:0K25mIwezkuFctAMH7qo+D" startDateTime = "2019-03-11T15:09:16.806"  endDateTime = "2019-03-11T15:09:16.806" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='167'/>
+					<ts:TotalTime value='6.88e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="UserDefined" qualifier="Skipped" />
+		</tr:Test>
+		<tr:Test ID = "864" name = "Kalibrera" startDateTime = "2019-03-11T15:09:18.833"  endDateTime = "2019-03-11T15:09:18.833"  testReferenceID="ID#:YzwyXAQXdkm4qXP22qIbUB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>MessagePopup</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='174'/>
+					<ts:TotalTime value='2.28e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "865" name = "UUTN_93431: ELR - Läs ström från last" startDateTime = "2019-03-11T15:09:18.838"  endDateTime = "2019-03-11T15:09:18.850"  testReferenceID="ID#:L/luUqlLR0O5p+GnMwrfTD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='175'/>
+					<ts:TotalTime value='0.0114895'/>
+					<ts:ModuleTime value='0.0113209'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466bb-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "198.761" xsi:type="ts:TS_double" nonStandardUnit="A" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "A" value = "192" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "A" value = "204" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "866" name = "UUTN_65868: Ke2701 - Mät utspänning" startDateTime = "2019-03-11T15:09:19.093"  endDateTime = "2019-03-11T15:09:19.324"  testReferenceID="ID#:SlSeUkY0ukCQnYhx7mK0jD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='178'/>
+					<ts:TotalTime value='0.230903'/>
+					<ts:ModuleTime value='0.230767'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466bc-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "24.3571777" xsi:type="ts:TS_double" nonStandardUnit="Volt" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Volt" value = "22.8" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "Volt" value = "24.72" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "867" name = "UUTN_93415: Läs spänning från last" startDateTime = "2019-03-11T15:09:19.328"  endDateTime = "2019-03-11T15:09:19.340"  testReferenceID="ID#:QGvKKBGYdEacx7jA7KRzWB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='179'/>
+					<ts:TotalTime value='0.011247'/>
+					<ts:ModuleTime value='0.011089'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466bd-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "23.957" xsi:type="ts:TS_double" nonStandardUnit="Vdc" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Vdc" value = "22.8" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LT">
+								<c:Datum nonStandardUnit = "Vdc" value = "24.36" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "868" name = "Elite pro NET - Open Session" startDateTime = "2019-03-11T15:09:19.352"  endDateTime = "2019-03-11T15:09:19.367"  testReferenceID="ID#:GM+yvtFzgkGuKu3yJp4CPD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='181'/>
+					<ts:TotalTime value='0.0154302'/>
+					<ts:ModuleTime value='0.0153806'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "869" name = "Mät Ineffekt" startDateTime = "2019-03-11T15:09:19.371"  endDateTime = "2019-03-11T15:09:20.572"  testReferenceID="ID#:92qSmBhFZECdz3RsASPiDA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='182'/>
+					<ts:TotalTime value='1.2007'/>
+					<ts:ModuleTime value='1.20065'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "870" name = "Elite pro NET Close Session" startDateTime = "2019-03-11T15:09:20.576"  endDateTime = "2019-03-11T15:09:20.577"  testReferenceID="ID#:IlQUNICFRkCtIpflj9TS2D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='183'/>
+					<ts:TotalTime value='0.0014271'/>
+					<ts:ModuleTime value='0.0013782'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "871" name = "UUTN_61754: Ineffektt" startDateTime = "2019-03-11T15:09:20.582"  endDateTime = "2019-03-11T15:09:20.582"  testReferenceID="ID#:ZkUVq/Y2+kO/QVEy2LzrSC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='184'/>
+					<ts:TotalTime value='0.0001914'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466be-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "5442.659026832" xsi:type="ts:TS_double" nonStandardUnit="W" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "W" value = "4780" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "W" value = "6240" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:Test ID = "872" name = "UUTN_34715: Beräkning av verkningsgrad." startDateTime = "2019-03-11T15:09:20.588"  endDateTime = "2019-03-11T15:09:20.588"  testReferenceID="ID#:cs1g3QxU2EGkz55Sr3T1SB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='185'/>
+					<ts:TotalTime value='0.0001301'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466bf-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "90.3922327897" xsi:type="ts:TS_double" nonStandardUnit="%" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "%" value = "83" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "%" value = "98" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "873" name = "If" startDateTime = "2019-03-11T15:09:20.594"  endDateTime = "2019-03-11T15:09:20.594"  testReferenceID="ID#:9Q1b5cZTEUmzhdN/wxVElD">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{True}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='186'/>
+					<ts:TotalTime value='9.49e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "874" name = "Set Lion Custom Parameters 2" startDateTime = "2019-03-11T15:09:20.601"  endDateTime = "2019-03-11T15:09:20.601"  testReferenceID="ID#:j1QE7wZLM0aNgkcQRxjNJD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='187'/>
+					<ts:TotalTime value='7.03e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "875" name = "Goto" startDateTime = "2019-03-11T15:09:20.607"  endDateTime = "2019-03-11T15:09:20.607"  testReferenceID="ID#:ZF5oel0KBUmzSg2XeCMRoA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Goto</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='188'/>
+					<ts:TotalTime value='0.0005745'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "876" name = "UUTP_20830: Access, TestMode" startDateTime = "2019-03-11T15:09:20.619"  endDateTime = "2019-03-11T15:09:20.893"  testReferenceID="ID#:QRGcKNJBZEqvlLrxv0FfsA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='192'/>
+					<ts:TotalTime value='0.273464'/>
+					<ts:ModuleTime value='0.273411'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "877" name = "UUTP_47355: Access - Styr ut 0%" startDateTime = "2019-03-11T15:09:20.896"  endDateTime = "2019-03-11T15:09:20.908"  testReferenceID="ID#:Aes4QyFj50KhwOQdMQ/WNC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='193'/>
+					<ts:TotalTime value='0.0123965'/>
+					<ts:ModuleTime value='0.0123322'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "878" name = "UUTP_20841: Access - PowerUnit Off" startDateTime = "2019-03-11T15:09:22.916"  endDateTime = "2019-03-11T15:09:22.934"  testReferenceID="ID#:0dTpLCWzsUaemOsQk7UPaA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='195'/>
+					<ts:TotalTime value='0.0183271'/>
+					<ts:ModuleTime value='0.0182517'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "879" name = "If" startDateTime = "2019-03-11T15:09:22.938"  endDateTime = "2019-03-11T15:09:22.938"  testReferenceID="ID#:aif0DhJ37Ee9r20FCRg7uB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{True}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='196'/>
+					<ts:TotalTime value='0.0001505'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "881" name = "End" startDateTime = "2019-03-11T15:09:22.949"  endDateTime = "2019-03-11T15:09:22.949"  testReferenceID="ID#:wq9ONKewiESPQKd6XxZ3WB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='199'/>
+					<ts:TotalTime value='5.62e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "882" name = "Set Custom Parameters 2" startDateTime = "2019-03-11T15:09:22.958"  endDateTime = "2019-03-11T15:09:22.959"  testReferenceID="ID#:ESqC0ubz9U2VFYPo+0TfCD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='200'/>
+					<ts:TotalTime value='0.0001274'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "883" name = "UUTP_43021: Skicka anpassade parametrar 2" startDateTime = "2019-03-11T15:09:22.963"  endDateTime = "2019-03-11T15:09:35.321"  testReferenceID="ID#:gLhl2aTth022+svHNveXaB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='201'/>
+					<ts:TotalTime value='12.3576'/>
+					<ts:ModuleTime value='12.3575'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "884" name = "Ta bort spänningsmatningen till effektsteget." startDateTime = "2019-03-11T15:09:35.325"  endDateTime = "2019-03-11T15:09:35.827"  testReferenceID="ID#:t9jnBssJCUizpQMwtNQekD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='202'/>
+					<ts:TotalTime value='0.501172'/>
+					<ts:ModuleTime value='0.501121'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "885" name = "Spänningssätt effektsteget." startDateTime = "2019-03-11T15:09:40.835"  endDateTime = "2019-03-11T15:09:41.336"  testReferenceID="ID#:D00NzqTmj0OKLXwx5SR+aB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='204'/>
+					<ts:TotalTime value='0.501136'/>
+					<ts:ModuleTime value='0.50108'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "886" name = "UUTP_97479: Access, TestMode" startDateTime = "2019-03-11T15:09:46.344"  endDateTime = "2019-03-11T15:09:46.608"  testReferenceID="ID#:0+w9XG2rjUGaPRbD0ieHvD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='206'/>
+					<ts:TotalTime value='0.264314'/>
+					<ts:ModuleTime value='0.264239'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "887" name = "UUTS_91751: Access, Kontrollerar kortets parametrar" startDateTime = "2019-03-11T15:09:46.613"  endDateTime = "2019-03-11T15:09:47.710"  testReferenceID="ID#:wyjE3rWzHkm2Rx5MtF+k6B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>StringValueTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='207'/>
+					<ts:TotalTime value='1.09685'/>
+					<ts:ModuleTime value='1.09673'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466c0-4407-11e9-92a1-00133b0fade8" name = "String">
+				<tr:TestData>
+					<c:Datum xsi:type="ts:TS_string" flags = "0x2400">
+						<c:Value>90300075</c:Value>
+					</c:Datum>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:Expected comparator = "CIEQ">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>90300075</c:Value>
+							</c:Datum>
+						</c:Expected>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "888" name = "Ta bort spänningsmatningen till effektsteget." startDateTime = "2019-03-11T15:09:47.714"  endDateTime = "2019-03-11T15:09:48.215"  testReferenceID="ID#:Aq6mN34r0UOVf4wQSdpEkC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='208'/>
+					<ts:TotalTime value='0.500294'/>
+					<ts:ModuleTime value='0.500246'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "889" name = "TEQP_23423: ELR - Sätt last till konstant volt till 0.1 x Uut" startDateTime = "2019-03-11T15:09:56.225"  endDateTime = "2019-03-11T15:09:56.237"  testReferenceID="ID#:3MukKacQtkaWecczWoMqPD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='210'/>
+					<ts:TotalTime value='0.0119146'/>
+					<ts:ModuleTime value='0.0117806'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "890" name = "Spänningssätt effektsteget." startDateTime = "2019-03-11T15:09:56.242"  endDateTime = "2019-03-11T15:09:56.743"  testReferenceID="ID#:ThwcsGdLHkuSTzKSTRL0nB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='211'/>
+					<ts:TotalTime value='0.500626'/>
+					<ts:ModuleTime value='0.500577'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:TestGroup name="C:\Test\P2\Test_P2_Access.seq#CAN" ID="891" callerName='CAN Test' testReferenceID="ID#:QPiy/P+hpE+eVwm9JfeRXD" startDateTime = "2019-03-11T15:09:56.754"  endDateTime = "2019-03-11T15:10:14.670" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='213'/>
+					<ts:TotalTime value='17.9161'/>
+					<ts:ModuleTime value='17.9159'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Passed" />
+			<tr:SessionAction ID = "892" name = "If" startDateTime = "2019-03-11T15:09:56.780"  endDateTime = "2019-03-11T15:09:56.781"  testReferenceID="ID#:CA3yY2MtZ0u7JSgB+WeGzB">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>{False}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_If</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='1'/>
+						<ts:TotalTime value='9.22e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "893" name = "Else If" startDateTime = "2019-03-11T15:09:56.786"  endDateTime = "2019-03-11T15:09:56.786"  testReferenceID="ID#:J0eYJvg1uUmDnxQXyfRDMC">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>{False}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_ElseIf</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='3'/>
+						<ts:TotalTime value='8.65e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "894" name = "Else If" startDateTime = "2019-03-11T15:09:56.790"  endDateTime = "2019-03-11T15:09:56.790"  testReferenceID="ID#:z05KvaP000yAbbRNimh+WA">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>{True}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_ElseIf</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='5'/>
+						<ts:TotalTime value='7.78e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "895" name = "Set CAN Bps to 125 000" startDateTime = "2019-03-11T15:09:56.793"  endDateTime = "2019-03-11T15:09:56.793"  testReferenceID="ID#:rrlJhD69OUC/pgNeUKfPRB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Statement</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='6'/>
+						<ts:TotalTime value='5.68e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "897" name = "End" startDateTime = "2019-03-11T15:09:56.801"  endDateTime = "2019-03-11T15:09:56.801"  testReferenceID="ID#:+T2x0MVj6U6ox2NW9imXZD">
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+								<c:Value>(If)</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NI_Flow_End</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='17'/>
+						<ts:TotalTime value='6.88e-005'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "898" name = "TEQP_80809: ELR - Sätt last till konstant volt till 0.96 x Uut" startDateTime = "2019-03-11T15:09:56.808"  endDateTime = "2019-03-11T15:09:56.819"  testReferenceID="ID#:f5EX/pqqSk24yLLEQadGWD">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='18'/>
+						<ts:TotalTime value='0.0105325'/>
+						<ts:ModuleTime value='0.0104646'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "899" name = "TEQP_44519: ELR - Last på" startDateTime = "2019-03-11T15:09:56.822"  endDateTime = "2019-03-11T15:09:56.843"  testReferenceID="ID#:0XKLoPMZl0yZ0rK+VfXGdC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='19'/>
+						<ts:TotalTime value='0.020551'/>
+						<ts:ModuleTime value='0.0204783'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "900" name = "TEQP_52476: PLH250-P - Ställ in motspänning tilt Uut Vdc" startDateTime = "2019-03-11T15:09:56.852"  endDateTime = "2019-03-11T15:09:57.875"  testReferenceID="ID#:51pBc0SB10WTknEDccrL6A">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='21'/>
+						<ts:TotalTime value='1.0235'/>
+						<ts:ModuleTime value='1.02338'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "tr-6d8466c1-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "23.97" xsi:type="ts:TS_double" nonStandardUnit="V" flags = "0x2400"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GE">
+									<c:Datum nonStandardUnit = "V" value = "23.04" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+								<c:Limit comparator = "LE">
+									<c:Datum nonStandardUnit = "V" value = "24.96" xsi:type="ts:TS_double" flags = "0x0000"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "901" name = "Anslut motspänning" startDateTime = "2019-03-11T15:09:57.880"  endDateTime = "2019-03-11T15:09:58.381"  testReferenceID="ID#:PL+UaGxn6UqiuCdo97O4HB">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='22'/>
+						<ts:TotalTime value='0.501209'/>
+						<ts:ModuleTime value='0.501137'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "902" name = "UUTP_34487: Starta CAN-test" startDateTime = "2019-03-11T15:09:58.385"  endDateTime = "2019-03-11T15:10:14.156"  testReferenceID="ID#:11X63TL+jUeS+cpUDWDJ0D">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='23'/>
+						<ts:TotalTime value='15.7708'/>
+						<ts:ModuleTime value='15.7707'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:SessionAction ID = "903" name = "Stoppa motspänning Uut Vdc" startDateTime = "2019-03-11T15:10:14.160"  endDateTime = "2019-03-11T15:10:14.661"  testReferenceID="ID#:YR5EVqKWDE6X/aQgYzwPAC">
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='24'/>
+						<ts:TotalTime value='0.501056'/>
+						<ts:ModuleTime value='0.500994'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+		</tr:TestGroup>
+		<tr:SessionAction ID = "904" name = "Deaktivera Remote Start CAN." startDateTime = "2019-03-11T15:10:16.691"  endDateTime = "2019-03-11T15:10:17.192"  testReferenceID="ID#:6kKwTGUfzkOUEnNyVESnqD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='215'/>
+					<ts:TotalTime value='0.501137'/>
+					<ts:ModuleTime value='0.501083'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "905" name = "Deaktivera Remote Start Aux." startDateTime = "2019-03-11T15:10:17.197"  endDateTime = "2019-03-11T15:10:17.698"  testReferenceID="ID#:gEHWIuvbe0y/ahT1s3vbnD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='216'/>
+					<ts:TotalTime value='0.500945'/>
+					<ts:ModuleTime value='0.50089'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "906" name = "Deaktivera Remote Start Pilot." startDateTime = "2019-03-11T15:10:17.703"  endDateTime = "2019-03-11T15:10:18.203"  testReferenceID="ID#:XnzYkWHKmEaXKy7/nh/TLA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='217'/>
+					<ts:TotalTime value='0.500831'/>
+					<ts:ModuleTime value='0.50078'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "907" name = "UUTP_34990: Access, TestMode" startDateTime = "2019-03-11T15:10:18.229"  endDateTime = "2019-03-11T15:10:18.497"  testReferenceID="ID#:X7IEgVYoi0WqAn7UwTnh/A">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='232'/>
+					<ts:TotalTime value='0.267975'/>
+					<ts:ModuleTime value='0.267905'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "908" name = "UUTP_55100: Access - PowerUnit Off" startDateTime = "2019-03-11T15:10:18.502"  endDateTime = "2019-03-11T15:10:18.513"  testReferenceID="ID#:0yMTzH/QXkCt/46qL2uLpB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='233'/>
+					<ts:TotalTime value='0.0111971'/>
+					<ts:ModuleTime value='0.0111265'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "909" name = "UUTP_41916: Access - Styr ut 0%" startDateTime = "2019-03-11T15:10:18.518"  endDateTime = "2019-03-11T15:10:18.529"  testReferenceID="ID#:sAtWMg7TyEGtNYcFlgncrD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='234'/>
+					<ts:TotalTime value='0.0111734'/>
+					<ts:ModuleTime value='0.0111013'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "910" name = "Ta bort spänningsmatningen till effektsteget." startDateTime = "2019-03-11T15:10:19.218"  endDateTime = "2019-03-11T15:10:19.719"  testReferenceID="ID#:0pmo+ed6V0ynAhgyjJZhvA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='237'/>
+					<ts:TotalTime value='0.500383'/>
+					<ts:ModuleTime value='0.500333'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "911" name = "UUTN_95172: Ke2701 - Mät CAN Motstånd" startDateTime = "2019-03-11T15:10:21.751"  endDateTime = "2019-03-11T15:10:21.996"  testReferenceID="ID#:FGKcTzzDY0O3Ndk/EC75WD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='243'/>
+					<ts:TotalTime value='0.244942'/>
+					<ts:ModuleTime value='0.244782'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466c2-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "117.753494" xsi:type="ts:TS_double" nonStandardUnit="Ohm" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum nonStandardUnit = "Ohm" value = "110" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum nonStandardUnit = "Ohm" value = "130" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "912" name = "Spänningssätt effektsteget." startDateTime = "2019-03-11T15:10:21.1000"  endDateTime = "2019-03-11T15:10:22.501"  testReferenceID="ID#:4gLhEuu7sUSjJCDjKgdGCA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='244'/>
+					<ts:TotalTime value='0.501199'/>
+					<ts:ModuleTime value='0.501149'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "913" name = "Voltage to high" startDateTime = "2019-03-11T15:10:22.512"  endDateTime = "2019-03-11T15:10:22.512"  testReferenceID="ID#:fofKT/0LaUuW37sqJvkCrD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>MessagePopup</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='246'/>
+					<ts:TotalTime value='4.42e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "914" name = "TEQP_61346: PLC - OFF" startDateTime = "2019-03-11T15:10:22.530"  endDateTime = "2019-03-11T15:10:22.531"  testReferenceID="ID#:zsdSoDJ6qkiKgjhpR7RIeC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='0'/>
+					<ts:TotalTime value='0.0003662'/>
+					<ts:ModuleTime value='0.0003308'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "915" name = "TEQP_11782: PLC - Vänta på svar" startDateTime = "2019-03-11T15:10:22.536"  endDateTime = "2019-03-11T15:10:24.550"  testReferenceID="ID#:Mj1UlvMu50OCT0+NzbYKWB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='1'/>
+					<ts:TotalTime value='2.01463'/>
+					<ts:ModuleTime value='2.01458'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "916" name = "TEQP_74030: PLC - Unlock" startDateTime = "2019-03-11T15:10:24.554"  endDateTime = "2019-03-11T15:10:24.555"  testReferenceID="ID#:9cpHfO/giECrzNDM6T03PD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='0.0007118'/>
+					<ts:ModuleTime value='0.0006502'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "917" name = "TEQP_85209: PLC - Vänta på svar" startDateTime = "2019-03-11T15:10:24.559"  endDateTime = "2019-03-11T15:10:28.575"  testReferenceID="ID#:eE0qfeVgH0KZZhgGPzQA1B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='3'/>
+					<ts:TotalTime value='4.01542'/>
+					<ts:ModuleTime value='4.01535'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "918" name = "PLC - Close Session" startDateTime = "2019-03-11T15:10:28.578"  endDateTime = "2019-03-11T15:10:28.589"  testReferenceID="ID#:V9tM1rpO2k2NL2j7Z2EGND">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='4'/>
+					<ts:TotalTime value='0.0114648'/>
+					<ts:ModuleTime value='0.011418'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "919" name = "TEQP_34671: ELR - Last av" startDateTime = "2019-03-11T15:10:28.593"  endDateTime = "2019-03-11T15:10:28.613"  testReferenceID="ID#:KthHk503aECMts2fOHHohA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='5'/>
+					<ts:TotalTime value='0.0204254'/>
+					<ts:ModuleTime value='0.0203581'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:SessionAction ID = "920" name = "ELR - Close Session" startDateTime = "2019-03-11T15:10:28.616"  endDateTime = "2019-03-11T15:10:28.627"  testReferenceID="ID#:co9vcAivUk+aIjoO5E1ClD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='6'/>
+					<ts:TotalTime value='0.0104911'/>
+					<ts:ModuleTime value='0.0104403'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "921" name = "Access - Close Session" startDateTime = "2019-03-11T15:10:29.134"  endDateTime = "2019-03-11T15:10:29.242"  testReferenceID="ID#:CacypVIlzkWFzQ0NFHx6AB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='8'/>
+					<ts:TotalTime value='0.107075'/>
+					<ts:ModuleTime value='0.107019'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "922" name = "TEQN_52408: PLH250-P - SET 0 VDC" startDateTime = "2019-03-11T15:10:29.245"  endDateTime = "2019-03-11T15:10:30.269"  testReferenceID="ID#:GgSps/91BUmPibm3SrVOcD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NumericLimitTest</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='9'/>
+					<ts:TotalTime value='1.02386'/>
+					<ts:ModuleTime value='1.02376'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+			<tr:TestResult ID = "tr-6d8466c3-4407-11e9-92a1-00133b0fade8" name = "Numeric">
+				<tr:TestData>
+					<c:Datum value = "-0.05" xsi:type="ts:TS_double" flags = "0x2400"/>
+				</tr:TestData>
+				<tr:TestLimits>
+					<tr:Limits>
+						<c:LimitPair operator = "AND">
+							<c:Limit comparator = "GE">
+								<c:Datum value = "-0.5" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+							<c:Limit comparator = "LE">
+								<c:Datum value = "0.5" xsi:type="ts:TS_double" flags = "0x0000"/>
+							</c:Limit>
+						</c:LimitPair>
+					</tr:Limits>
+				</tr:TestLimits>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "923" name = "PLH250-P - Close Session" startDateTime = "2019-03-11T15:10:30.273"  endDateTime = "2019-03-11T15:10:30.276"  testReferenceID="ID#:NFJrQ6PTc0Ou3BnoFBzm4A">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='10'/>
+					<ts:TotalTime value='0.0025571'/>
+					<ts:ModuleTime value='0.00251'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "924" name = "If" startDateTime = "2019-03-11T15:10:30.279"  endDateTime = "2019-03-11T15:10:30.279"  testReferenceID="ID#:bpmFUZdxDk+/cpnRLQafJA">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>{True}</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='11'/>
+					<ts:TotalTime value='0.0001367'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "926" name = "End" startDateTime = "2019-03-11T15:10:31.300"  endDateTime = "2019-03-11T15:10:31.300"  testReferenceID="ID#:6EMhUegUaU6gBB6LFpDwmB">
+			<tr:Data>
+				<c:Collection>
+					<c:Item name = "ReportText">
+						<c:Datum xsi:type="ts:TS_string" flags = "0x400000">
+							<c:Value>(If)</c:Value>
+						</c:Datum>
+					</c:Item>
+				</c:Collection>
+			</tr:Data>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='17'/>
+					<ts:TotalTime value='6.55e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+	</tr:ResultSet>
+	<tr:TestProgram>
+		<c:SerialNumber>
+			MEMK1263
+		</c:SerialNumber>
+		<tr:Configuration>
+			<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+				<c:Item name = "IncludeTSExtensionElements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeAttributes">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeLimits">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeMeasurements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeArrayMeasurement">
+					<c:Datum value = "2" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementFilter">
+					<c:Datum value = "3" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementMax">
+					<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeTimes">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Format">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>xml</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NumericFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>%$.13g</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ResultFilterExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>True</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "GeneratePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseTemporaryFile">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseSequenceFileNameAsPrefix">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AddTimeAndDateToFileName">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUT">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ForceFileNameToBeUnique">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AppendToFileIfItExists">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "DirectoryType">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>SpecifyByExpression</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Directory">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>Report</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "UseFormatForExtension">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Extension">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFilePath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "DisableReportGeneration">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResults">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BodyGenerator">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>DLL</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Colors">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "LabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#32FFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "UUTSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000E0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "HeaderSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#8000CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TableBorder">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "MainBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SetupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF8000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "CleanupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#ADD8E6</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ReportTextBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF32CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Terminated">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000080</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Failed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Error">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Passed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Skipped">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#B98028</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Done">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Running">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TerminatedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000FF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ErrorBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "PassedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SkippedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "DoneBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FFCC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "RunningBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackLabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF2020</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#D0D0D0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "BatchHeadingBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "DateAndTimeFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>TimeFirst</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewBatchFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachTestSocket">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "StoreUUTReportWithBatchReport">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BatchBaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>BatchReport</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "LabelSize">
+					<c:Datum value = "26" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "RelStylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>C:\Program Files (x86)\National Instruments\TestStand 2014\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "ATMLStylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>TR_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>trml.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "StoreStylesheetAbsolutePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ProcessOnTheFly">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "PurgeOnTheFlyResults">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResultComments">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseLocalizedDecimalPoint">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportStyle">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>ATML5</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileSequentialModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"C:\\Reports\\"+StationGlobals.ReportPath+"\\Report_"+StationGlobals.Part+"[$(UUTStatus)][$(UUT)][$(FileDate)][$(FileTime)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileParallelModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_Report[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUTStatus">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>$(UUTSTATUS)$(UUT)$(FILEDATE)$(FILETIME)$(UNIQUE)$(FILEEXTENSION)</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "CheckIfMacroListIsUnchanged">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ATML5StylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr5_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr5_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr5_expand.xsl</c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "Atml_Rpt_Options">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "AddReportText">
+							<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+						</c:Item>
+						<c:Item name = "ExtensionDLLAbsolutePath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TestResultsSchemaPath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "ATML6StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr6_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr6_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr6_expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+			</c:Collection>
+		</tr:Configuration>
+	</tr:TestProgram>
+	<tr:TestStation>
+		<c:SerialNumber>MEMK1263</c:SerialNumber>
+	</tr:TestStation>
+	<tr:UUT>
+		<c:Definition>
+			<c:Identification>
+				<c:ModelName>UNKNOWN</c:ModelName>
+				<c:IdentificationNumbers>
+					<c:IdentificationNumber  number="LS2621-1002"  type="Part"  qualifier="LS2621-1002"/>
+				</c:IdentificationNumbers>
+			</c:Identification>
+		</c:Definition>
+		<c:SerialNumber>9190300075</c:SerialNumber>
+	</tr:UUT>
+	<tr:Extension>
+		<ts:TSResultSetProperties>
+			<ts:NumOfResults value = '208'/>
+		</ts:TSResultSetProperties>
+	</tr:Extension>
+</trc:TestResults>
+</trc:TestResultsCollection>

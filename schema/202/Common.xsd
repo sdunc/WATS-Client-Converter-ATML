@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.ieee.org/ATML/2006/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ieee.org/ATML/2006/Common" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.06">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+      This schema is specified in IEEE 1671-2006, "IEEE Trial-Use Standard
+      for Automatic Test Markup Language (ATML) for Exchanging Automatic Test 
+      Equipment and Test Information via XML."
+      This schema is a World Wide Web Consortium (W3C) Extensible
+      Markup Language (XML) binding of the ATML Common component defined in IEEE
+      1671-2006, "IEEE Trial-Use Standard for Automatic Test Markup 
+      Language (ATML) for Exchanging Automatic Test Equipment and Test
+      Information via XML."
+      The purpose of this schema is to provide unique types and attributes 
+      for ATML schemas. This schema uses the W3C XML Schema definition 
+      language as the encoding. This allows for interoperability and 
+      the exchange of ATML component instances between various systems.
+      This schema shall not be modified but may be included in
+      derivative works.
+
+      Copyright (c) 2006 Institute of Electrical and Electronics
+      Engineers, Inc.
+
+      USE AT YOUR OWN RISK
+
+    </xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="ArrayIndexor" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Used as the base type of any attribute that specifies the size of an array, or the index of an element within an array. Shall contain a string that designates an n-dimensional array index or array dimension, with the format [a,b,c,…,n], where a,b,c,…n are numeric indices. When a derived attribute specifies the size of an array, the attribute shall indicate the maximum size of each dimension of the array. When a derived attribute indicates a specific element of an array, the index value(s) shall be zero-based ordinal numbers. Examples: (element index: [0] or [0,1] or [2,2,0]; maximum array index: [2,3] or [3,3,3]).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\[([0-9]+)((,([0-9]+))*)\]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ComparisonOperator">
+		<xs:annotation>
+			<xs:documentation>Specifies a comparison operator between two elements.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="GT"/>
+			<xs:enumeration value="GE"/>
+			<xs:enumeration value="LT"/>
+			<xs:enumeration value="LE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="DocumentRootAttributes">
+		<xs:annotation>
+			<xs:documentation>Per style guide, all schemas must include this attribute group at their root element.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="uuid" type="Uuid" use="required"/>
+		<xs:attribute name="securityClassification" type="NonBlankString" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="UnitAttributes">
+		<xs:annotation>
+			<xs:documentation>Shall be used by any element that requires a unit of measure.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="standardUnit" type="StandardUnit" use="optional"/>
+		<xs:attribute name="nonStandardUnit" type="NonBlankString" use="optional"/>
+		<xs:attribute name="unitQualifier" type="NonBlankString" use="optional"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="EqualityComparisonOperator">
+		<xs:annotation>
+			<xs:documentation>Specifies an algebraic equality or inequality comparison between two elements.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EQ"/>
+			<xs:enumeration value="NE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HexValue">
+		<xs:annotation>
+			<xs:documentation>Used to specify a hex-encoded binary value.   Contains the string  “0x” followed by a finite-length sequence of characters ‘0’-‘9’ and ‘a’ - ‘f’. Letters may be either lower case or upper case.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0(x|X))?([0-9]|[a-f]|[A-F])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LogicalOperator">
+		<xs:annotation>
+			<xs:documentation>Specifies a Boolean logic combination of two elements.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AND"/>
+			<xs:enumeration value="OR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MaskOperator">
+		<xs:annotation>
+			<xs:documentation>Specifies a Boolean logic combination of two mask values.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AND"/>
+			<xs:enumeration value="OR"/>
+			<xs:enumeration value="XOR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NonBlankString">
+		<xs:annotation>
+			<xs:documentation>Specifies a non-nullable string, i.e. a string that must contain at least one character. Also, white space will be collapsed (i.e. multiple space characters will be replaced with a single space).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:whiteSpace value="replace"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NonBlankURI">
+		<xs:annotation>
+			<xs:documentation>Specifies a non-nullable URIi.e. a URI that must contain at least one character.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:anyURI">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PortDirection">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Input"/>
+			<xs:enumeration value="Output"/>
+			<xs:enumeration value="Bi-Directional"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PortType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ground"/>
+			<xs:enumeration value="Analog"/>
+			<xs:enumeration value="Digital"/>
+			<xs:enumeration value="Power"/>
+			<xs:enumeration value="Optical"/>
+			<xs:enumeration value="Software"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StandardUnit">
+		<xs:annotation>
+			<xs:documentation>Shall be used for any object that contains a non-deprecated unit of measure defined in IEEE 260.1 (i.e. ‘volts’, ‘ohms’, ‘MHz’, etc.). Although not exhaustively tested, the following regexp may be used to validate IEEE 260.1 units. [(((y|z|a|f|p|n|µ|u|m|c|d|h|k|Ki|Mi?|Gi?|Ti?|Pi?|Ei?|Z|Y))?((a|A|Ah|Å|atm|at|b|B|BW|Bm|BV|BuV|bar|bbl|Bd|Bq|Btu(_IT)?|Btu_th|cal(_IT)?|cal_th|cd|eV|C|Ci|°|d|deg|degC|°C|degF|°F|°R|degR|dyn|erg|ft|ftHg|ftH2O|F|fc|fL|g|G|G[b|i]|Gal|gal(\(Imp\))?|gal\(US\)|gf|gr|Gy|h|H|ha|hp|Hz|in|inHg|inH2O|J|kat|K|kn|L|lb|lbf|lm|lx|m|mi|mil|mho|mHg|min|'|mol|Mx|mo|N|Nm|nmi|Np|o|Oe|Ohm|oz|P|Pa|pc|%|ph|pt|pdl|ppm|qt|r|R|rad|rem|s|S|sb|sec|slug|sr|St|Sv|t|T|thm|ton|t|u|ua|V|var|VA|W|Wb|Wh|yd)(^?-?\d+)?))(((\s*(·|\.|/)\s*)(((y|z|a|f|p|n|µ|u|m|c|d|h|k|Ki|Mi?|Gi?|Ti?|Pi?|Ei?|Z|Y))?((a|A|Ah|Å|atm|at|b|B|BW|Bm|BV|BuV|bar|bbl|Bd|Bq|Btu(_IT)?|Btu_th|cal(_IT)?|cal_th|cd|eV|C|Ci|°|d|deg|degC|°C|degF|°F|°R|degR|dyn|erg|ft|ftHg|ftH2O|F|fc|fL|g|G|G[b|i]|Gal|gal(\(Imp\))?|gal\(US\)|gf|gr|Gy|h|H|ha|hp|Hz|in|inHg|inH2O|J|kat|K|kn|L|lb|lbf|lm|lx|m|mi|mil|mho|mHg|min|'|mol|Mx|mo|N|Nm|nmi|Np|o|Oe|Ohm|oz|P|Pa|pc|%|ph|pt|pdl|ppm|qt|r|R|rad|rem|s|S|sb|sec|slug|sr|St|Sv|t|T|thm|ton|t|u|ua|V|var|VA|W|Wb|Wh|yd)(^?-?\d+)?)))|((\s*((·|\.|/)\s*)?)\(\s*\d*\s*((((y|z|a|f|p|n|µ|u|m|c|d|h|k|Ki|Mi?|Gi?|Ti?|Pi?|Ei?|Z|Y))?((a|A|Ah|Å|atm|at|b|B|BW|Bm|BV|BuV|bar|bbl|Bd|Bq|Btu(_IT)?|Btu_th|cal(_IT)?|cal_th|cd|eV|C|Ci|°|d|deg|degC|°C|degF|°F|°R|degR|dyn|erg|ft|ftHg|ftH2O|F|fc|fL|g|G|G[b|i]|Gal|gal(\(Imp\))?|gal\(US\)|gf|gr|Gy|h|H|ha|hp|Hz|in|inHg|inH2O|J|kat|K|kn|L|lb|lbf|lm|lx|m|mi|mil|mho|mHg|min|'|mol|Mx|mo|N|Nm|nmi|Np|o|Oe|Ohm|oz|P|Pa|pc|%|ph|pt|pdl|ppm|qt|r|R|rad|rem|s|S|sb|sec|slug|sr|St|Sv|t|T|thm|ton|t|u|ua|V|var|VA|W|Wb|Wh|yd)(^?-?\d+)?))((\s*(·|\.|/)\s*)(((y|z|a|f|p|n|µ|u|m|c|d|h|k|Ki|Mi?|Gi?|Ti?|Pi?|Ei?|Z|Y))?((a|A|Ah|Å|atm|at|b|B|BW|Bm|BV|BuV|bar|bbl|Bd|Bq|Btu(_IT)?|Btu_th|cal(_IT)?|cal_th|cd|eV|C|Ci|°|d|deg|degC|°C|degF|°F|°R|degR|dyn|erg|ft|ftHg|ftH2O|F|fc|fL|g|G|G[b|i]|Gal|gal(\(Imp\))?|gal\(US\)|gf|gr|Gy|h|H|ha|hp|Hz|in|inHg|inH2O|J|kat|K|kn|L|lb|lbf|lm|lx|m|mi|mil|mho|mHg|min|'|mol|Mx|mo|N|Nm|nmi|Np|o|Oe|Ohm|oz|P|Pa|pc|%|ph|pt|pdl|ppm|qt|r|R|rad|rem|s|S|sb|sec|slug|sr|St|Sv|t|T|thm|ton|t|u|ua|V|var|VA|W|Wb|Wh|yd)(^?-?\d+)?)))*)\s*\)(^?-?\d+)?))*]    **** NOTE: This attribute and NonStandardUnit are mutually exclusive.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="Uuid">
+		<xs:annotation>
+			<xs:documentation>Shall be used as the base type for any attribute or element that is intended to contain a 32-digit hexadecimal universally unique identifer.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Fa-f0-9]{32}|(\{|\()?[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}(\}|\))?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="binary">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type DatumType that contain a binary value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" use="required">
+					<xs:annotation>
+						<xs:documentation>The binary value. The attribute shall contain a finite-length sequence of characters ‘0’ and ‘1’.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="([0-1])*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="binaryArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of binary values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="binary" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="binary">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="boolean">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements the base type DatumType that contain a boolean value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="xs:boolean" use="required">
+					<xs:annotation>
+						<xs:documentation>The boolean value.  In accordance with XML standards, a boolean value may be [0 | 1 | ‘false’ | ‘true’].</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="booleanArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of boolean values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="boolean">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CollectionArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of collections.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="Collection" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined in Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="Collection">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Collection">
+		<xs:annotation>
+			<xs:documentation>Used for ATML schema elements that contain multiple data values, either unordered sets of values, ordered vectors of values (with the order of items in the vector being represented by the order of Item child elements) or collections of named values, also known as “records” (with the names being represented by the ‘name’ attributes of Item child elements). The type is defined with optional unit attributes. These attributes, if used, shall be assumed to apply to any Item in the collection that does not have explicitly declared units.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Stores an individual data value, with an optional name.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="Value">
+							<xs:attribute name="name" type="NonBlankString" use="optional">
+								<xs:annotation>
+									<xs:documentation>The collection item's name</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="defaultStandardUnit" type="StandardUnit" use="optional"/>
+		<xs:attribute name="defaultNonStandardUnit" type="NonBlankString" use="optional"/>
+		<xs:attribute name="defaultUnitQualifier" type="NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="complex">
+		<xs:annotation>
+			<xs:documentation>Intended as a base type for ATML schema elements that will contain complex numbers (i.e. with real and imaginary components).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="real" type="xs:double" use="required">
+					<xs:annotation>
+						<xs:documentation>The real part of the complex value.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="imaginary" type="xs:double" use="required">
+					<xs:annotation>
+						<xs:documentation>The imaginary part of the complex value.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="complexArray">
+		<xs:annotation>
+			<xs:documentation>If a schema requires definition of an element that will contain an array of complex numbers (i.e. with real and imaginary components), the array element may be based on this type.  Element is unbounded and optional, thus a complexArray may be present with no child elements. In such a case, the element would merely be a place holder.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="complex" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default complex number value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="complex">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dateTime">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a date-time value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="xs:dateTime" use="required">
+					<xs:annotation>
+						<xs:documentation>The date-time value.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dateTimeArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of date-time values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="dateTime">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DatumType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Used for ATML schema elements that contain a single numeric, boolean, string or date-time data value, with an optional unit.  Must be qualified with xsi:type which indicates the specific datatype for the element</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="UnitAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="double">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a numeric value that corresponds to the IEEE double precision 64-bit floating point type</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="xs:double" use="required">
+					<xs:annotation>
+						<xs:documentation>The numeric value of the element.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="doubleArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of numeric values that correspond to the IEEE double precision 64-bit floating point type.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="double" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="double">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hexadecimal">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a hex-encoded binary value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="HexValue" use="required">
+					<xs:annotation>
+						<xs:documentation>The hexadecimal representation of the numeric value.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hexadecimalArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of hex-encoded binary values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="hexadecimal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="hexadecimal">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index within the array</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IndexedArrayType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Abstract type is used for ATML schema elements that contain a zero-based array of numeric, boolean, string or date-time data values, or an array of collections, with an optional unit. The array may be sparse.  Must be qualified with xsi:type which indicates the type of the array.  All elements of the array MUST be of the same type.  Ordering of elements in the array is specified via the index attrribute of the "Element" element in the derived types.</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="UnitAttributes"/>
+		<xs:attribute name="dimensions" type="ArrayIndexor" use="required">
+			<xs:annotation>
+				<xs:documentation>Specifies the array bounds for each dimension. Implicitly, specifies the number of dimensions.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="integer">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a 32-bit signed integer value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="xs:int" use="required">
+					<xs:annotation>
+						<xs:documentation>The numeric value, between  2147483647 and 2147483648 (inclusive).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="integerArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of 32-bit signed integer values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="integer" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="integer">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index within the array</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="octal">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain an octal-encoded binary value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" use="required">
+					<xs:annotation>
+						<xs:documentation>The octal representation of the numeric value. The attribute shall contain the character ‘0’ followed by a finite-length sequence of characters ‘0’-‘7’.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="(0)([0-7])*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="octalArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of octal-encoded binary values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="octal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through “Element” child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="octal">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index within the array</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="string">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a string value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The string value.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="stringArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of string values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="string">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index within the array</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="unsignedInteger">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of type DatumType that contain a 32-bit unsigned integer value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatumType">
+				<xs:attribute name="value" type="xs:unsignedInt" use="required">
+					<xs:annotation>
+						<xs:documentation>The numeric value, between 0 and 4294967295 (inclusive).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="unsignedIntegerArray">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for elements of base type IndexedArrayType that contain an array of 32-bit unsigned integer values.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexedArrayType">
+				<xs:sequence>
+					<xs:element name="DefaultElementValue" type="unsignedInteger" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The default value of array elements. Applies to all array elements that are not explicitly defined through Element child elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The value of an array element.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="unsignedInteger">
+									<xs:attribute name="position" type="ArrayIndexor" use="required">
+										<xs:annotation>
+											<xs:documentation>The element’s index within the array</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Connector">
+		<xs:complexContent>
+			<xs:extension base="ItemDescription">
+				<xs:attribute name="ID" type="NonBlankString" use="required"/>
+				<xs:attribute name="location" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Front"/>
+							<xs:enumeration value="Back"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="type" type="NonBlankString" use="required"/>
+				<xs:attribute name="matingConnectorType" type="NonBlankString" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConnectorLocation">
+		<xs:attribute name="connectorID" type="NonBlankString" use="required"/>
+		<xs:attribute name="pinID" type="NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Document">
+		<xs:sequence>
+			<xs:choice minOccurs="0">
+				<xs:element name="URL" type="NonBlankURI"/>
+				<xs:element name="Text" type="NonBlankString"/>
+			</xs:choice>
+			<xs:element name="Extension" type="Extension" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="uuid" type="Uuid" use="required"/>
+		<xs:attribute name="name" type="NonBlankString" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="DocumentReference">
+		<xs:annotation>
+			<xs:documentation>Reference to an external document</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="uuid" type="Uuid" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="EnvironmentalElements">
+		<xs:sequence>
+			<xs:element name="Altitude" type="ToleranceValue" minOccurs="0"/>
+			<xs:element name="HumidityPercentage" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="minimumValue" type="xs:double" use="required"/>
+					<xs:attribute name="maximumValue" type="xs:double" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Shock" type="double" minOccurs="0"/>
+			<xs:element name="Temperature" type="ToleranceValue" minOccurs="0"/>
+			<xs:element name="Vibration" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Frequency" type="double" minOccurs="0"/>
+						<xs:element name="Displacement" type="ToleranceValue" minOccurs="0"/>
+						<xs:element name="Velocity" type="double" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnvironmentalRequirements">
+		<xs:sequence>
+			<xs:element name="Operation" type="EnvironmentalElements" minOccurs="0"/>
+			<xs:element name="StorageTransport" type="EnvironmentalElements" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Extension">
+		<xs:annotation>
+			<xs:documentation>Used by implementers desiring to extend an ATML schema to meet the unique needs of their use case.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HardwareInstance">
+		<xs:complexContent>
+			<xs:extension base="ItemInstance">
+				<xs:sequence>
+					<xs:element name="ManufactureDate" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Date of manufacture</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Calibration" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="time" type="xs:dateTime" use="required">
+								<xs:annotation>
+									<xs:documentation>The date and time of the last calibration</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Components" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>This collector permits listing any subcomponents of the subject Hardware Item.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Component" type="HardwareInstance" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>Unbounded set of elements describing and identifying each subcomponent.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ParentComponent" type="HardwareInstance" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>An identifier for the next-higher assembly to which the described hardware item belongs. Permits the creation of a simple part tree.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PowerOn" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="count" type="xs:int" use="required">
+								<xs:annotation>
+									<xs:documentation>The number of power on/off cycles experienced by the hardware item at the time of record creation. This information may be useful in applications where diagnostics are performed.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="time" type="xs:duration" use="required">
+								<xs:annotation>
+									<xs:documentation>The total cumulative time that power has been applied to the described hardware item. This information may be useful in applications where diagnostics are performed.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IdentificationNumber">
+		<xs:attribute name="number" type="NonBlankString" use="required"/>
+		<xs:attribute name="type" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Part"/>
+					<xs:enumeration value="Model"/>
+					<xs:enumeration value="Other"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ItemDescription">
+		<xs:annotation>
+			<xs:documentation>Base type for any element needing a rich set of descriptors</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Description" type="NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Free-form texttual description of the item described.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Identification">
+				<xs:annotation>
+					<xs:documentation>Provides a "bag" of elements that may be used to uniquely identify a "class" of Item.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Version" type="NonBlankString" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>For use cases requiring specification of a Version for the described item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ModelName" type="NonBlankString" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>For use cases requiring specification of a model name for a described item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IdentificationNumbers" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Collector element permitting mulitiple part or model numbers for the described item.  The structure permits both user and/or manufacturer part or model numbers.  If collector is used, at least one identification number is required.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:choice maxOccurs="unbounded">
+									<xs:element name="IdentificationNumber">
+										<xs:annotation>
+											<xs:documentation>The identificastion number for the item described in the instance document.</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="IdentificationNumber">
+													<xs:attribute name="qualifier" type="NonBlankString" use="required"/>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ManufacturerIdentificationtNumber">
+										<xs:annotation>
+											<xs:documentation>For use cases where it is necessary to specify a manufacturer identification number that may not be the part number assigned by the end user of the item.</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="IdentificationNumber">
+													<xs:attribute name="manufacturerName" type="NonBlankString" use="required">
+														<xs:annotation>
+															<xs:documentation>Keyref to manufacturer</xs:documentation>
+														</xs:annotation>
+													</xs:attribute>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Manufacturers" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Collector element permitting multiple Manufacturers for a given part. The 'name' attribute of Manufacturer is required and must be unique within the scope of the instance document. This uniqueness is enforced by the identity constraint declared on the Identification element.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Manufacturer" type="ManufacturerData" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Extension" type="Extension" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides for extension of the Identification element at this point in the schema.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:all>
+					<xs:attribute name="designator" type="NonBlankString" use="optional">
+						<xs:annotation>
+							<xs:documentation>Reference designator</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+				<xs:keyref name="ManufacturerIDNumberRef" refer="ManufacturerID">
+					<xs:selector xpath="./IdentificationNumbers/ManufacturerIdentificationNumber"/>
+					<xs:field xpath="@manufacturerName"/>
+				</xs:keyref>
+				<xs:unique name="ManufacturerID">
+					<xs:selector xpath="./Manufacturers/Manufacturer"/>
+					<xs:field xpath="@name"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="Extension" type="Extension" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Provides for extension of the ItemDescription element at this point in the schema.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="version" type="NonBlankString" use="optional"/>
+		<xs:attribute name="name" type="NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ItemDescriptionReference" abstract="false">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance document for referencing an Item Description</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0">
+			<xs:element name="DescriptionDocumentReference" type="DocumentReference">
+				<xs:annotation>
+					<xs:documentation>If this element is used, it shall contain data identifying the specific ATML "[xxx]Description" document being referred to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Definition" type="ItemDescription">
+				<xs:annotation>
+					<xs:documentation>Inherits the ItemDescription type, which permits unique identification of a "class" of an Item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Interface">
+		<xs:sequence>
+			<xs:element name="Ports">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Port" type="Port" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ItemInstance" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Base type for any element describing an instance</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ItemDescriptionReference">
+				<xs:sequence>
+					<xs:element name="SerialNumber" type="NonBlankString" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>In combination with either the DescriptionDocumentReference or the elements of Description, this element uniquely identifies an Instance of an Item</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ItemInstanceReference" abstract="false">
+		<xs:annotation>
+			<xs:documentation>Used in ATML instance documents for referencing an Item Instance</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="InstanceDocumentReference" type="DocumentReference"/>
+			<xs:element name="Definition" type="ItemInstance"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LimitPair">
+		<xs:annotation>
+			<xs:documentation>Used as the base type for any element that captures paired boundary condition data that are used in a comparison or evaluation.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Limit" type="SingleLimit" minOccurs="2" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation>There shall be two and only two Limit values. See the full description of SingleLimit below.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Nominal" type="Value" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Used when an expected or preferred value must be captured.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="operator" type="LogicalOperator" use="required">
+			<xs:annotation>
+				<xs:documentation>A limit pair describes a boundary. The comparison with this boundary may be for a value between the limits or outside the limits. The LogicalOperator AND explicitly indicates a between comparison; OR explicitly indicates an outside comparison. Example: GT 3 AND LT 7 (between) vs. GT10 OR LT 3 (outside). While the logical operator may be inferred from the combination of limit values and comparison types, the LogicalOperator </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Limit">
+		<xs:annotation>
+			<xs:documentation>Used as the base type for any element which contains limit data that is a comparison to a single value. There may be only a single child element specified for an element of Limit.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="Expected">
+				<xs:annotation>
+					<xs:documentation>The desired or expected value for the limit comparison.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="Value">
+							<xs:attribute name="comparator" type="EqualityComparisonOperator" use="required"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SingleLimit" type="SingleLimit">
+				<xs:annotation>
+					<xs:documentation>The value being used for the limit comparison.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LimitPair" type="LimitPair">
+				<xs:annotation>
+					<xs:documentation>For use cases where a limit is actually a limit pair.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Mask">
+				<xs:annotation>
+					<xs:documentation>Useful for use cases where a limit requires comparison with a numeric mask.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Expected" type="Value"/>
+						<xs:element name="MaskValue" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Shall be used as the base type for any element that contains identifying information for a human operator of an ATE or other equipment.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="Value">
+										<xs:attribute name="name" type="NonBlankString" use="optional"/>
+										<xs:attribute name="operation" type="MaskOperator" use="required"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Extension" type="Extension" minOccurs="0"/>
+		</xs:choice>
+		<xs:attribute name="operator" type="LogicalOperator" use="optional">
+			<xs:annotation>
+				<xs:documentation>A limit describes a boundary. There may be uses cases where comparisons are made with multiple values. In such cases, these multiple value comparisons may be combined with logical AND or OR operators. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="NonBlankString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="MailingAddress">
+		<xs:sequence>
+			<xs:element name="Address1" type="NonBlankString"/>
+			<xs:element name="Address2" type="NonBlankString" minOccurs="0"/>
+			<xs:element name="City" type="NonBlankString"/>
+			<xs:element name="State" type="NonBlankString" minOccurs="0"/>
+			<xs:element name="Country" type="NonBlankString"/>
+			<xs:element name="PostalCode" type="NonBlankString"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManufacturerData">
+		<xs:all>
+			<xs:element name="Contacts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Contact information for the manufacturer of the item.  Includes e-mail addresses and phone numbers.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Contact" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>E-mail address and phone number.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:attribute name="name" type="NonBlankString" use="required">
+									<xs:annotation>
+										<xs:documentation>The name associated with the contact.  Useful when multiple e-mail addresses are specified.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="email" type="NonBlankString" use="optional">
+									<xs:annotation>
+										<xs:documentation>Do we want to define an ATML type for an e-mail address?  If yes, should be defined in Common.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="phoneNumber" type="NonBlankString" use="optional"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FaxNumber" type="NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The facsimile telephone number of the manufacturer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MailingAddress" type="MailingAddress" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The mailing address of the manufacturer. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="URL" type="NonBlankURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The URL of the manufacturer's web site.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="name" type="NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>Manufacturer name.  If the name is going to be the key, we should enforce uniqueness.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="CageCode" type="NonBlankString" use="optional">
+			<xs:annotation>
+				<xs:documentation>An identifier for the manufacturer</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="NamedValue">
+		<xs:complexContent>
+			<xs:extension base="Value">
+				<xs:attribute name="name" type="NonBlankString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Operator">
+		<xs:annotation>
+			<xs:documentation>Used as the base type for any element that contains identifying information for a human operator of an ATE or other equipment.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OtherData" type="NamedValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Unbounded set of tag/value pairs. Permits a wide range of identification information for the operator, as required by the use case.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ID" type="NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>A unique identifier within the scope of the instance document</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="NonBlankString" use="optional">
+			<xs:annotation>
+				<xs:documentation>A string value representing the name of the operator.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="PhysicalInterface">
+		<xs:sequence>
+			<xs:element name="Ports">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Port" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="Port">
+										<xs:sequence>
+											<xs:element name="ConnectorPins" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="ConnectorPin" type="ConnectorLocation" maxOccurs="unbounded"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Connectors" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Connector" type="Connector" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Port">
+		<xs:sequence>
+			<xs:element name="Extension" type="Extension" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="NonBlankString" use="required"/>
+		<xs:attribute name="direction" type="PortDirection" use="optional"/>
+		<xs:attribute name="type" type="PortType" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="SingleLimit">
+		<xs:annotation>
+			<xs:documentation>Used as the base type of any element that will contain a single limit value used in  a comparison.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Value">
+				<xs:attribute name="comparator" type="ComparisonOperator" use="required">
+					<xs:annotation>
+						<xs:documentation>A limit describes a boundary. There may be uses cases where comparisons are made with multiple values. In such cases, these multiple value comparisons may be combined with logical AND or OR operators. </xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SoftwareInstance">
+		<xs:annotation>
+			<xs:documentation>Used as the base type for any element that will contain information to identify a software item.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ItemInstance">
+				<xs:sequence>
+					<xs:element name="ReleaseDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The actual release date of a referenced software item</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ToleranceValue">
+		<xs:complexContent>
+			<xs:extension base="double">
+				<xs:attribute name="tolerancePlus" type="xs:double" use="optional"/>
+				<xs:attribute name="toleranceMinus" type="xs:double" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Value">
+		<xs:annotation>
+			<xs:documentation>Used for ATML schema elements that contain values (boolean, numeric, date-time, string, collections, arrays, etc.). Different child elements shall be used to represent a single data value, a collection of data values or an array of data values.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="Datum" type="DatumType">
+				<xs:annotation>
+					<xs:documentation>Used when Value represents a single data value.  This is an abstract type and must be qualified using xsi:type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Collection" type="Collection">
+				<xs:annotation>
+					<xs:documentation>Used when Value represents a collection of data values. The size of a collection may be determined by counting the number of item elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndexedArray" type="IndexedArrayType">
+				<xs:annotation>
+					<xs:documentation>Used when Value represents an array of data values.  This is an abstract type and must be qualified using xsi:type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

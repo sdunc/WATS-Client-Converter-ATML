@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Mike Seavey (Northrop Grumman Corporation (ES)) -->
+<xs:schema xmlns="urn:IEEE-P1636.99:01:SimicaCommon" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:IEEE-P1636.99:01:SimicaCommon" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.01">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+		
+This schema is specified in IEEE Std 1636.99, "Standard for Software Interface for Maintenance Information Collection and Analysis (SIMICA): Common Information
+Elements." This schema is a World Wide Web Consortium (W3C) Extensible Markup Language (XML) binding of the "SIMICA Common" component defined in IEEE Std 1636.99.
+The purpose of this schema is to allow the creation of IEEE Std 1636.1 and IEEE Std 1636.2 XML instance documents.This schema uses the W3C XML Schema definition language as the encoding.
+This allows for interoperability and the exchange of SIMICA component instances between various systems.
+This schema shall not be modified but may be included in derivative works. 
+
+Copyright (c) 2012 Institute of Electrical and Electronics 
+Engineers, Inc.
+
+USE AT YOUR OWN RISK
+
+    </xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="urn:IEEE-1671:2010:Common" schemaLocation="Common.xsd"/>
+	<xs:complexType name="HardwareInstance">
+		<xs:annotation>
+			<xs:documentation>An entity containing information to characterize any hardware item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="SystemInstance">
+				<xs:sequence>
+					<xs:element name="Calibration" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Properties: isRef 0, content complex
+The HardwareInstance/Calibration child element shall contain the date and time the hardware item was last calibrated.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:attribute name="time" type="xs:dateTime" use="required">
+								<xs:annotation>
+									<xs:documentation>The date and time of the last calibration</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Components" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Properties: isRef 0, content complex
+The HardwareInstance/Components child element shall identify the next-lower assembly(s) belonging to the parent hardware item.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Component" type="SystemInstanceReference" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>Base type: c:ItemInstanceReference
+Properties: isRef 0, content complex
+The HardwareInstance/Components/Component child element shall identify each next-lower assembly(s) belonging to the parent hardware item.
+</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ParentComponent" type="HardwareInstance" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: c:HardwareInstance
+Properties: isRef 0, content complex
+The HardwareInstance/ParentComponent child element shall identify the next-higher assembly to which the parent hardware item belongs.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PowerOn" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Properties: isRef 0, content complex
+The HardwareInstance/PowerOn child element shall indicate the number of power-on cycles and the total power-on time experienced by the hardware item at the time of creation of the XML instance document.
+</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:attribute name="cycles" type="xs:int" use="required">
+								<xs:annotation>
+									<xs:documentation>The number of power on/off cycles experienced by the hardware item at the time of record creation. This information may be useful in applications where diagnostics are performed.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="cummulativeTime" type="xs:duration" use="required">
+								<xs:annotation>
+									<xs:documentation>The total cumulative time that power has been applied to the described hardware item. This information may be useful in applications where diagnostics are performed.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IdentificationNumber">
+		<xs:annotation>
+			<xs:documentation>Base type for any element that needs to be identified</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idNumber" type="c:NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>This attribute is used to store the identification number text.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idType" use="required">
+			<xs:annotation>
+				<xs:documentation>This attribute is used to identify the type of identification number.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="c:NonBlankString">
+					<xs:enumeration value="Part"/>
+					<xs:enumeration value="Model"/>
+					<xs:enumeration value="Other"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="manufacturerName" type="c:NonBlankString">
+			<xs:annotation>
+				<xs:documentation>Identifies the name of the manufacturer.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="qualifier" type="c:NonBlankString">
+			<xs:annotation>
+				<xs:documentation>Provides additional descriptive data that further specifies or identifies the Identification Number.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="SoftwareInstance">
+		<xs:annotation>
+			<xs:documentation>Base type for any element that will contain information to identify a software item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="SystemInstance">
+				<xs:sequence>
+					<xs:element name="ReleaseDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Base type: xs:date
+Properties: isRef 0, content simple
+The SoftwareInstance/ReleaseDate child element shall contain the actual release date of the referenced software item.
+</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SystemInstance">
+		<xs:annotation>
+			<xs:documentation>Base type for any element describing an specific target of maintenance against which the maintenance action has been performed</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="c:ItemInstance">
+				<xs:sequence>
+					<xs:element name="IssueDate" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date the item was issued as available for use.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Warranty" type="Warranty" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Identifies the warranty associated with an Instance of an System</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SystemInstanceReference">
+		<xs:annotation>
+			<xs:documentation>Base type for any element that require an element to reference an sc:SystemInstance which has no serial number.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="InstanceDocumentReference" type="c:DocumentReference">
+				<xs:annotation>
+					<xs:documentation>Identifies the UUID corresponding to the specific instance document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Definition" type="SystemInstance">
+				<xs:annotation>
+					<xs:documentation>Uniquely identify a specific description of a system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="WorkOrder">
+		<xs:annotation>
+			<xs:documentation>Base type for any element defining identifying information for the item being maintained</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DocumentControlNumber" type="c:NonBlankString">
+				<xs:annotation>
+					<xs:documentation>The identifier for the document or collection of information across multiple levels of maintenance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaintenanceControlNumber" type="c:NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The identifier for the document or collection of information at a level of maintenance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaintenanceLevel" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>To identify and describe a level of maintenance in a maintenance architecture. Common examples include organizational, intermediate, depot, and original equipment manufacturer.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="abbrevation" type="c:NonBlankString" use="required">
+						<xs:annotation>
+							<xs:documentation>The abbreviation for the level of maintenance.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="name" type="c:NonBlankString" use="optional">
+						<xs:annotation>
+							<xs:documentation>The name of the level of maintenance.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Description" type="c:NonBlankString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The description of the maintenance action task.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="c:Extension" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Element provided to permit extensibility of the schema.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Warranty">
+		<xs:annotation>
+			<xs:documentation>Base type for any element defining a manufacturer's legal responsibility for the support of a given system or item</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="warrantedBy" type="c:NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the manufacturer which warrants the unit</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="warrantyDuration" type="xs:duration" use="required">
+			<xs:annotation>
+				<xs:documentation>Time the unit is covered by the warranty, e.g. one-year warranty, two-year warranty, etc.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="warrantyEffectiveDate" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>Date when the manufacturer warranty begins to take effect</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="warrantyExclusion" type="c:NonBlankString" use="required">
+			<xs:annotation>
+				<xs:documentation>Discrepancy in the unit that is not covered by the warranty</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

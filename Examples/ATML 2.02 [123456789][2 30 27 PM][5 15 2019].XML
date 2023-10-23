@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="iso-8859-1" ?><?xml-stylesheet type="text/xsl" href="C:\Program Files\National Instruments\TestStand 2017\Components\Models\TestStandModels\ATML\StyleSheets\TR_horizontal.xsl"?>
+<tr:TestResults xmlns:tr="http://www.ieee.org/ATML/2007/TestResults" xmlns:c="http://www.ieee.org/ATML/2006/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/1.0" uuid="33efe64e-770d-11e9-826e-00155d017250">
+	<tr:Personnel>
+		<tr:SystemOperator ID = "administrator" name = "administrator"/>
+	</tr:Personnel>
+	<tr:ResultSet ID="30" name = "C:\Users\Public\Documents\National Instruments\TestStand 2017 (64-bit)\Examples\Demos\Computer Motherboard Test\LabVIEW\Computer Motherboard Test Sequence VIC.seq" startDateTime = "2019-05-15T14:30:27.058" endDateTime = "2019-05-15T14:30:29.228">
+		<tr:Outcome value="Failed" />
+		<tr:TestGroup name="C:\Users\Public\Documents\National Instruments\TestStand 2017 (64-bit)\Examples\Demos\Computer Motherboard Test\LabVIEW\Computer Motherboard Test Sequence VIC.seq#MainSequence" ID="30" userDefinedType="SequenceCallStepName = 'MainSequence Callback'" startDateTime = "2019-05-15T14:30:27.058"  endDateTime = "2019-05-15T14:30:29.228" >
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepId>ID#:xnW0PT0ORE2el7wF7uaxyB</ts:StepId>
+					<ts:StepType>SequenceCall</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:StepCausedSequenceFailure value='true'/>
+					<ts:Index value='10'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value="Failed" />
+			<tr:SessionAction ID = "31" name = "Add Partnumber" startDateTime = "2019-05-15T14:30:27.093"  endDateTime = "2019-05-15T14:30:27.093" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:QdJzwgx36RGCbgAVXQFyUA</ts:StepId>
+						<ts:StepType>Statement</ts:StepType>
+						<ts:StepGroup>Setup</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "32" name = "Simulation Dialog" startDateTime = "2019-05-15T14:30:27.102"  endDateTime = "2019-05-15T14:30:29.079" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:vGGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Setup</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='1'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "33" name = "Turn Vacuum Table On" startDateTime = "2019-05-15T14:30:29.080"  endDateTime = "2019-05-15T14:30:29.081" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:vWGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Setup</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='2'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test ID = "34" name = "Powerup Test" startDateTime = "2019-05-15T14:30:29.088"  endDateTime = "2019-05-15T14:30:29.088" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:vmGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:SessionAction ID = "35" name = "If" startDateTime = "2019-05-15T14:30:29.090"  endDateTime = "2019-05-15T14:30:29.091" >
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="c:string">
+								<c:Value>{True}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:v2GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NI_Flow_If</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='1'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:TestGroup name="C:\Users\Public\Documents\National Instruments\TestStand 2017 (64-bit)\Examples\Demos\Computer Motherboard Test\LabVIEW\Computer Motherboard Test Sequence VIC.seq#CPU Test" ID="36" userDefinedType="SequenceCallStepName = 'CPU Test'" startDateTime = "2019-05-15T14:30:29.100"  endDateTime = "2019-05-15T14:30:29.126" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:wGGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>SequenceCall</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='2'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value="Passed" />
+				<tr:Test ID = "37" name = "Register Test" startDateTime = "2019-05-15T14:30:29.116"  endDateTime = "2019-05-15T14:30:29.116" >
+					<tr:Extension>
+						<ts:TSStepProperties>
+							<ts:StepId>ID#:0GGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+							<ts:StepType>PassFailTest</ts:StepType>
+							<ts:StepGroup>Main</ts:StepGroup>
+							<ts:BlockLevel value='0'/>
+							<ts:Index value='0'/>
+						</ts:TSStepProperties>
+					</tr:Extension>
+					<tr:Outcome value = "Passed" />
+				</tr:Test>
+				<tr:Test ID = "38" name = "Instruction Set Test" startDateTime = "2019-05-15T14:30:29.117"  endDateTime = "2019-05-15T14:30:29.117" >
+					<tr:Extension>
+						<ts:TSStepProperties>
+							<ts:StepId>ID#:0WGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+							<ts:StepType>PassFailTest</ts:StepType>
+							<ts:StepGroup>Main</ts:StepGroup>
+							<ts:BlockLevel value='0'/>
+							<ts:Index value='1'/>
+						</ts:TSStepProperties>
+					</tr:Extension>
+					<tr:Outcome value = "Passed" />
+				</tr:Test>
+				<tr:Test ID = "39" name = "Cache Test" startDateTime = "2019-05-15T14:30:29.121"  endDateTime = "2019-05-15T14:30:29.122" >
+					<tr:Extension>
+						<ts:TSStepProperties>
+							<ts:StepId>ID#:0mGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+							<ts:StepType>PassFailTest</ts:StepType>
+							<ts:StepGroup>Main</ts:StepGroup>
+							<ts:BlockLevel value='0'/>
+							<ts:Index value='2'/>
+						</ts:TSStepProperties>
+					</tr:Extension>
+					<tr:Outcome value = "Passed" />
+				</tr:Test>
+				<tr:Test ID = "40" name = "FPU Test" startDateTime = "2019-05-15T14:30:29.124"  endDateTime = "2019-05-15T14:30:29.124" >
+					<tr:Extension>
+						<ts:TSStepProperties>
+							<ts:StepId>ID#:02GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+							<ts:StepType>PassFailTest</ts:StepType>
+							<ts:StepGroup>Main</ts:StepGroup>
+							<ts:BlockLevel value='0'/>
+							<ts:Index value='3'/>
+						</ts:TSStepProperties>
+					</tr:Extension>
+					<tr:Outcome value = "Passed" />
+				</tr:Test>
+			</tr:TestGroup>
+			<tr:Test ID = "41" name = "ROM Test" startDateTime = "2019-05-15T14:30:29.150"  endDateTime = "2019-05-15T14:30:29.150" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:wWGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='3'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "42" name = "RAM Test" startDateTime = "2019-05-15T14:30:29.151"  endDateTime = "2019-05-15T14:30:29.151" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:wmGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='4'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+			</tr:Test>
+			<tr:Test ID = "43" name = "Video Test" startDateTime = "2019-05-15T14:30:29.161"  endDateTime = "2019-05-15T14:30:29.162" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:w2GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='5'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Passed" />
+				<tr:TestResult ID = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "5" xsi:type="c:double" nonStandardUnit="microseconds"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:LimitPair operator = "AND">
+								<c:Limit comparator = "GT">
+									<c:Datum nonStandardUnit = "microseconds" value = "0" xsi:type="c:double"/>
+								</c:Limit>
+								<c:Limit comparator = "LT">
+									<c:Datum nonStandardUnit = "microseconds" value = "10" xsi:type="c:double"/>
+								</c:Limit>
+							</c:LimitPair>
+						</tr:Limits>
+					</tr:TestLimits>
+					<tr:Extension>
+						<ts:TSLimitProperties>
+							<ts:RawLimits>
+								<ts:Low value = "0" xsi:type="c:double" />
+								<ts:High value = "10" xsi:type="c:double" />
+							</ts:RawLimits>
+						</ts:TSLimitProperties>
+					</tr:Extension>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:Test ID = "44" name = "Keyboard Test" startDateTime = "2019-05-15T14:30:29.166"  endDateTime = "2019-05-15T14:30:29.166" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:xGGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:StepCausedSequenceFailure value='true'/>
+						<ts:Index value='6'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Failed" />
+				<tr:TestResult ID = "Numeric">
+					<tr:TestData>
+						<c:Datum value = "4" xsi:type="c:double"/>
+					</tr:TestData>
+					<tr:TestLimits>
+						<tr:Limits>
+							<c:SingleLimit comparator = "GT">
+								<c:Datum value = "5" xsi:type="c:double"/>
+							</c:SingleLimit>
+						</tr:Limits>
+					</tr:TestLimits>
+					<tr:Extension>
+						<ts:TSLimitProperties>
+							<ts:RawLimits>
+								<ts:Low value = "5" xsi:type="c:double" />
+							</ts:RawLimits>
+						</ts:TSLimitProperties>
+					</tr:Extension>
+				</tr:TestResult>
+			</tr:Test>
+			<tr:SessionAction ID = "45" name = "If" startDateTime = "2019-05-15T14:30:29.172"  endDateTime = "2019-05-15T14:30:29.172" >
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="c:string">
+								<c:Value>{True}</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:xWGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NI_Flow_If</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='7'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:Test name="CPU Diagnostics" ID="46" userDefinedType="SequenceCallStepName = 'CPU Diagnostics'" startDateTime = "2019-05-15T14:30:29.175"  endDateTime = "2019-05-15T14:30:29.175" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:xmGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>SequenceCall</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='2'/>
+						<ts:Index value='8'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value="Aborted" qualifier="Skipped" />
+			</tr:Test>
+			<tr:Test ID = "47" name = "ROM Diagnostics" startDateTime = "2019-05-15T14:30:29.177"  endDateTime = "2019-05-15T14:30:29.177" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:x2GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='2'/>
+						<ts:Index value='9'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Aborted" qualifier= "Skipped" />
+			</tr:Test>
+			<tr:Test ID = "48" name = "RAM Diagnostics" startDateTime = "2019-05-15T14:30:29.181"  endDateTime = "2019-05-15T14:30:29.181" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:yGGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='2'/>
+						<ts:Index value='10'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Aborted" qualifier= "Skipped" />
+			</tr:Test>
+			<tr:Test ID = "49" name = "Video Diagnostics" startDateTime = "2019-05-15T14:30:29.184"  endDateTime = "2019-05-15T14:30:29.184" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:yWGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NumericLimitTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='2'/>
+						<ts:Index value='11'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Aborted" qualifier= "Skipped" />
+			</tr:Test>
+			<tr:Test ID = "50" name = "Keyboard Diagnostics" startDateTime = "2019-05-15T14:30:29.186"  endDateTime = "2019-05-15T14:30:29.192" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:ymGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>PassFailTest</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='2'/>
+						<ts:Index value='12'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:Outcome value = "Failed" />
+			</tr:Test>
+			<tr:SessionAction ID = "51" name = "End" startDateTime = "2019-05-15T14:30:29.195"  endDateTime = "2019-05-15T14:30:29.195" >
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="c:string">
+								<c:Value>(If)</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:y2GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NI_Flow_End</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='1'/>
+						<ts:Index value='13'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "53" name = "End" startDateTime = "2019-05-15T14:30:29.206"  endDateTime = "2019-05-15T14:30:29.206" >
+				<tr:Data>
+					<c:Collection>
+						<c:Item name = "ReportText">
+							<c:Datum xsi:type="c:string">
+								<c:Value>(If)</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</tr:Data>
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:zmGTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>NI_Flow_End</ts:StepType>
+						<ts:StepGroup>Main</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='16'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+			<tr:SessionAction ID = "54" name = "Turn Vacuum Table Off" startDateTime = "2019-05-15T14:30:29.215"  endDateTime = "2019-05-15T14:30:29.215" >
+				<tr:Extension>
+					<ts:TSStepProperties>
+						<ts:StepId>ID#:z2GTqrEX5hGzYpiQlqYQ+D</ts:StepId>
+						<ts:StepType>Action</ts:StepType>
+						<ts:StepGroup>Cleanup</ts:StepGroup>
+						<ts:BlockLevel value='0'/>
+						<ts:Index value='0'/>
+					</ts:TSStepProperties>
+				</tr:Extension>
+				<tr:ActionOutcome value = "Done" />
+			</tr:SessionAction>
+		</tr:TestGroup>
+	</tr:ResultSet>
+	<tr:TestStation>
+		<c:SerialNumber>TS-2016-BETA</c:SerialNumber>
+	</tr:TestStation>
+	<tr:UUT UutType="hardware">
+		<c:Definition>
+			<c:Identification>
+				<c:ModelName>UNKNOWN</c:ModelName>
+				<c:IdentificationNumbers>
+					<c:IdentificationNumber  number="Ragnar123"  type="Part"  qualifier="Ragnar123"/>
+				</c:IdentificationNumbers>
+			</c:Identification>
+		</c:Definition>
+		<c:SerialNumber>123456789</c:SerialNumber>
+	</tr:UUT>
+	<tr:Extension>
+		<ts:TSResultSetProperties>
+			<ts:NumOfResults value = '23'/>
+		</ts:TSResultSetProperties>
+	</tr:Extension>
+</tr:TestResults>
