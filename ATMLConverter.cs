@@ -347,9 +347,15 @@ namespace ATMLConverter
 
         StepStatusType GetOutcome(XElement outcome)
         {
-            string value = outcome.Attribute("value").Value.Replace("NotStarted", "Skipped");
+            string value = outcome.Attribute("value")?.Value.Replace("NotStarted", "Skipped");
             if (value == "UserDefined" || value == "Aborted")
-                value = outcome.Attribute("qualifier").Value;
+            {
+                var qualifierAttribute = outcome.Attribute("qualifier");
+                if (qualifierAttribute != null)
+                {
+                    value = qualifierAttribute.Value;
+                }
+            }
             if (Enum.TryParse(value, out StepStatusType sst))
                 return sst;
             else
