@@ -199,6 +199,7 @@ namespace ATMLConverter
                         var stepOutcome = GetOutcome(subElement.Element(tr + "Outcome"));
                         switch (stepType)
                         {
+                            case "HAF_DI_PFT":
                             case "NI_Wait":
                             case "SequenceCall":
                             case "PassFailTest":
