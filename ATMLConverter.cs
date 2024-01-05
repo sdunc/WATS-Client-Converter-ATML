@@ -228,8 +228,10 @@ namespace ATMLConverter
                                 }
                                 break;
                             case "HAF_AI_NLT":
+                            case "HAF_PS_Readback_NLT":
                             case "NumericLimitTest":
                             case "NI_MultipleNumericLimitTest":
+                                Console.WriteLine("HAF!");
                                 NumericLimitStep numericLimitStep = currentSequence.AddNumericLimitStep(subElement.Attribute("name").Value);
 
                                 // Filter out additional results according to TestStand ATML stylesheet
