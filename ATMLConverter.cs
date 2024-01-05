@@ -211,6 +211,7 @@ namespace ATMLConverter
                                 break;
                             case "HAF_Init":
                             case "CAF_Init_ConfigFile":
+                            case "CAF_ControlDevice":
                             case "StringValueTest":
                                 step = currentSequence.AddStringValueStep(subElement.Attribute("name").Value);
 
