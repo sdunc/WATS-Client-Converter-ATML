@@ -199,6 +199,8 @@ namespace ATMLConverter
                         var stepOutcome = GetOutcome(subElement.Element(tr + "Outcome"));
                         switch (stepType)
                         {
+                            // note(srd): added to see what it looks like haha.
+                            case "HAF_Init":
                             case "PassFailTest":
                                 step = currentSequence.AddPassFailStep(subElement.Attribute("name").Value);
                                 ((PassFailStep)step).AddTest(stepOutcome != StepStatusType.Failed);
@@ -281,6 +283,11 @@ namespace ATMLConverter
                                 }
                                 step = numericLimitStep;
                                 break;
+                            default:
+                                // Note(srd): Can we handle any random step in a generic way?
+                                // Need to define step so it is not null.
+                                break;
+
                         }
                         if (step != null) step.Status = stepOutcome;
                     }
