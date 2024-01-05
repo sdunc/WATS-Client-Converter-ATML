@@ -199,6 +199,7 @@ namespace ATMLConverter
                         var stepOutcome = GetOutcome(subElement.Element(tr + "Outcome"));
                         switch (stepType)
                         {
+                            case "SequenceCall":
                             case "PassFailTest":
                                 step = currentSequence.AddPassFailStep(subElement.Attribute("name").Value);
                                 ((PassFailStep)step).AddTest(stepOutcome != StepStatusType.Failed);
