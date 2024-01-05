@@ -183,6 +183,8 @@ namespace ATMLConverter
                     }
                     else if (subElement.Name.LocalName == "SessionAction")
                     {
+                        // Note(srd): Does not grab step data.
+                        // This is where waveforms / stimulus profiles are!
                         GenericStepTypes genericStepType = GenericStepTypes.Action;
                         stepType = stepType.Replace("Statement", "Action");
                         try //Try to use Icontypes to interpret
@@ -199,6 +201,7 @@ namespace ATMLConverter
                         var stepOutcome = GetOutcome(subElement.Element(tr + "Outcome"));
                         switch (stepType)
                         {
+                            case "HAF_WVFM_IN": // Todo(srd): Should be its own case to handle waveform data!
                             case "HAF_DI_PFT":
                             case "NI_Wait":
                             case "SequenceCall":
