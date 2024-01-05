@@ -270,9 +270,7 @@ namespace ATMLConverter
                                             }
                                             else
                                             {
-                                                string measureName = testResult.Attribute("name")?.Value;
-                                                if (measureName == null)
-                                                    measureName = testResult.Attribute("ID")?.Value;
+                                                string measureName = (testResult.Attribute("name")?.Value) ?? (testResult.Attribute("ID")?.Value);
                                                 if (compOp.ToString().Length > 2)
                                                     numericLimitStep.AddMultipleTest(value, compOp, low, high, unit, measureName, testOutcome);
                                                 else
