@@ -210,6 +210,7 @@ namespace ATMLConverter
                                 ((PassFailStep)step).AddTest(stepOutcome != StepStatusType.Failed);
                                 break;
                             case "HAF_Init":
+                            case "CAF_Init_ConfigFile":
                             case "StringValueTest":
                                 step = currentSequence.AddStringValueStep(subElement.Attribute("name").Value);
 
