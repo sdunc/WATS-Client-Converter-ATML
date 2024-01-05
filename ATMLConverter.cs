@@ -162,7 +162,11 @@ namespace ATMLConverter
                 XElement extension = subElement.Element(tr + "Extension");
                 if (extension != null)
                 {
-                    XElement properties = subElement.Element(tr + "Extension").Element(ts + "TSStepProperties") ?? throw new InvalidOperationException($"{subElement.Name.LocalName} ID = \"{subElement.Attribute("ID").Value}\" in {element.Name.LocalName} ID = \"{element.Attribute("ID").Value}\" is not a step.");
+                    XElement properties = subElement.Element(tr + "Extension").Element(ts + "TSStepProperties");
+
+                    if (properties == null)
+                        throw new InvalidOperationException($"{subElement.Name.LocalName} ID = \"{subElement.Attribute("ID").Value}\" in {element.Name.LocalName} ID = \"{element.Attribute("ID").Value}\" is not a step.");
+
                     string stepType = properties.Element(ts + "StepType").Value;
 
                     //if (properties != null) //If we want to avoid throwing errors and want the conversion to continue.
@@ -223,6 +227,7 @@ namespace ATMLConverter
                                     ((StringValueStep)step).AddTest(strCompOp, strValue, strLimit, testOutcome);
                                 }
                                 break;
+                            case "HAF_AI_NLT":
                             case "NumericLimitTest":
                             case "NI_MultipleNumericLimitTest":
                                 NumericLimitStep numericLimitStep = currentSequence.AddNumericLimitStep(subElement.Attribute("name").Value);
