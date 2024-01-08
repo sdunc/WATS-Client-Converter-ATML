@@ -447,8 +447,13 @@ namespace ATMLConverter
         {
             step.StepGroup = (StepGroupEnum)Enum.Parse(typeof(StepGroupEnum), prop.Element(ts + "StepGroup").Value);
             if (prop.Element(ts + "TotalTime") != null)
+            {
                 step.StepTime = double.Parse(prop.Element(ts + "TotalTime").Attribute("value").Value, CultureInfo.InvariantCulture);
-            if (prop.Element(ts + "ModuleTime") != null) step.ModuleTime = double.Parse(prop.Element(ts + "ModuleTime").Attribute("value").Value, CultureInfo.InvariantCulture);
+            }
+            if (prop.Element(ts + "ModuleTime") != null)
+            {
+                step.ModuleTime = double.Parse(prop.Element(ts + "ModuleTime").Attribute("value").Value, CultureInfo.InvariantCulture);
+            }
         }
 
         private UUTReport CreateReportHeader(TDM api, XElement testResults)
