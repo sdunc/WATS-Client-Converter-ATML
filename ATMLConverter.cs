@@ -14,8 +14,16 @@ namespace ATMLConverter
 {
     public class ATMLConverter : IReportConverter_v2
     {
+        public ATMLConverter() { }
 
-
+        public ATMLConverter(Dictionary<string, string> args)
+        {
+            arguments = args;
+        }
+        
+        XNamespace trc, tr, ts, xsi, c;
+        
+        public Dictionary<string, string> ConverterParameters => arguments;
         Dictionary<string, string> arguments = new Dictionary<string, string>
         {
             { "operationTypeCode","10"},
@@ -25,35 +33,13 @@ namespace ATMLConverter
             { "sequenceVersion","0.0.0"}
         };
 
-        public Dictionary<string, string> ConverterParameters => arguments;
-
-        public ATMLConverter() { }
-
-        public ATMLConverter(Dictionary<string, string> args)
-        {
-            arguments = args;
-        }
-
-        private string GetArgument(string argumentName)
+        string GetArgument(string argumentName)
         {
             if (arguments.ContainsKey(argumentName))
                 return arguments[argumentName];
             else
                 return ConverterParameters[argumentName];
         }
-
-        /*
-         202:
-            <tr:TestResults xmlns:tr="http://www.ieee.org/ATML/2007/TestResults" xmlns:c="http://www.ieee.org/ATML/2006/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/1.0" uuid="aaba70f8-7190-11e9-9276-9822efe210a8">
-         50:
-            <trc:TestResultsCollection xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0"> 
-            <trc:TestResults uuid="3a4e9dfb-7191-11e9-9276-9822efe210a8" xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
-         601:
-            <trc:TestResultsCollection xmlns:trc="urn:IEEE-1636.1:2013:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2013:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:sc="urn:IEEE-1636.99:2013:SimicaCommon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/3.0">
-            <trc:TestResults uuid="5b360926-7191-11e9-9276-9822efe210a8" xmlns:trc="urn:IEEE-1636.1:2013:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2013:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:sc="urn:IEEE-1636.99:2013:SimicaCommon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/3.0">
-        */
-
-        XNamespace trc, tr, ts, xsi, c;
 
         void GetNameSpaces(XElement rootElement, out XNamespace trc, out XNamespace tr, out XNamespace ts, out XNamespace xsi, out XNamespace c)
         {
@@ -82,45 +68,18 @@ namespace ATMLConverter
                 c = "urn:IEEE-1671:2010:Common";
             }
             else
+            {
                 throw new NotSupportedException("Unsupported ATML Format. Supported formats: 2.02,5.0,6.01");
-        }
-
-        public Report ImportReport(TDM api, Stream file)
-        {
-            api.TestMode = TestModeType.Import;
-            api.ValidationMode = ValidationModeType.AutoTruncate;
-            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(file);
-            XDocument atml = XDocument.Load(reader);
-            GetNameSpaces(atml.Root, out trc, out tr, out ts, out xsi, out c);
-            if (trc == null) //no collection container, root is Testresults
-            {
-                UUTReport uut = CreateReportHeader(api, atml.Root);
-                SequenceCall currentSequence = uut.GetRootSequenceCall();
-                ProcessElements(uut, atml.Root.Element(tr + "ResultSet").Element(tr + "TestGroup"), currentSequence);
-                ProcessResultSetProperties(uut, atml.Element(tr + "TestResults"));
-                api.Submit(uut);
             }
-            else
-            {
-                foreach (XElement testResults in atml.Root.Elements(trc + "TestResults"))
-                {
-                    UUTReport uut = CreateReportHeader(api, testResults);
-                    ProcessResultSet(api, uut, testResults);
-                    ProcessResultSetProperties(uut, testResults);
-                    api.Submit(uut);
-                }
-            }
-            return null;
         }
-
-
-        private void ProcessResultSet(TDM api, UUTReport uut, XElement testResults)
+        
+        void ProcessResultSet(TDM api, UUTReport uut, XElement testResults)
         {
             SequenceCall currentSequence = uut.GetRootSequenceCall();
             ProcessElements(uut, testResults.Element(tr + "ResultSet"), currentSequence);
         }
 
-        private void ProcessResultSetProperties(UUTReport uut, XElement testResults)
+        void ProcessResultSetProperties(UUTReport uut, XElement testResults)
         {
             XElement TSResultSetProperties = testResults.Element(tr + "Extension").Element(ts + "TSResultSetProperties");
             if (TSResultSetProperties != null)
@@ -128,12 +87,15 @@ namespace ATMLConverter
                 XElement TestSocketIndex = TSResultSetProperties.Element(ts + "TestSocketIndex");
                 if (TestSocketIndex != null
                     && short.TryParse(TSResultSetProperties.Element(ts + "TestSocketIndex").Value, out short tsi))
+                {
                     uut.TestSocketIndex = tsi;
-
+                }
 
                 XElement batchSerialNumber = TSResultSetProperties.Element(ts + "BatchSerialNumber");
                 if (batchSerialNumber != null)
+                {
                     uut.BatchSerialNumber = batchSerialNumber.Value;
+                }
             }
         }
 
@@ -375,7 +337,7 @@ namespace ATMLConverter
             return (UUTStatusType)Enum.Parse(typeof(UUTStatusType), stepStatusType.ToString());
         }
 
-        private void GetNumLimits(XElement testLimits, out double low, out double high, out CompOperatorType compOp)
+        void GetNumLimits(XElement testLimits, out double low, out double high, out CompOperatorType compOp)
         {
             low = 0; high = 0; compOp = CompOperatorType.GELE;
             if (testLimits.Element(tr + "Limits").Element(c + "LimitPair") != null)
@@ -429,7 +391,7 @@ namespace ATMLConverter
             }
         }
 
-        private void GetStrLimits(XElement testLimits, out string limit, out CompOperatorType compOp)
+        void GetStrLimits(XElement testLimits, out string limit, out CompOperatorType compOp)
         {
             compOp = CompOperatorType.LOG;
             limit = string.Empty;
@@ -441,7 +403,7 @@ namespace ATMLConverter
             }
         }
 
-        private void SetStepProperties(XElement prop, Step step)
+        void SetStepProperties(XElement prop, Step step)
         {
             step.StepGroup = (StepGroupEnum)Enum.Parse(typeof(StepGroupEnum), prop.Element(ts + "StepGroup").Value);
             if (prop.Element(ts + "TotalTime") != null)
@@ -454,7 +416,7 @@ namespace ATMLConverter
             }
         }
 
-        private UUTReport CreateReportHeader(TDM api, XElement testResults)
+        UUTReport CreateReportHeader(TDM api, XElement testResults)
         {
             XElement uutDefinition = testResults.Element(tr + "UUT")?.Element(c + "Definition");
             if (testResults.Element(tr + "UUT") == null)
@@ -504,9 +466,8 @@ namespace ATMLConverter
             return uutReport;            
         }
 
-        private UUTReport CreateReport(TDM api, ATML50.schema.TestResults testResults)
+        UUTReport CreateReport(TDM api, ATML50.schema.TestResults testResults)
         {
-
             var uutDefinition = (ATML202.schema.ItemDescription)testResults.UUT.Item;
             var testProgram = (ATML202.schema.ItemDescription)testResults.TestProgram.Item;
             UUTReport uutReport = api.CreateUUTReport(
@@ -522,6 +483,34 @@ namespace ATMLConverter
             var testStation = (ATML202.schema.ItemDescription)testResults.TestStation.Item;
             uutReport.StationName = testResults.TestStation.SerialNumber;
             return uutReport;
+        }
+        
+        public Report ImportReport(TDM api, Stream file)
+        {
+            api.TestMode = TestModeType.Import;
+            api.ValidationMode = ValidationModeType.AutoTruncate;
+            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(file);
+            XDocument atml = XDocument.Load(reader);
+            GetNameSpaces(atml.Root, out trc, out tr, out ts, out xsi, out c);
+            if (trc == null) //no collection container, root is Testresults
+            {
+                UUTReport uut = CreateReportHeader(api, atml.Root);
+                SequenceCall currentSequence = uut.GetRootSequenceCall();
+                ProcessElements(uut, atml.Root.Element(tr + "ResultSet").Element(tr + "TestGroup"), currentSequence);
+                ProcessResultSetProperties(uut, atml.Element(tr + "TestResults"));
+                api.Submit(uut);
+            }
+            else
+            {
+                foreach (XElement testResults in atml.Root.Elements(trc + "TestResults"))
+                {
+                    UUTReport uut = CreateReportHeader(api, testResults);
+                    ProcessResultSet(api, uut, testResults);
+                    ProcessResultSetProperties(uut, testResults);
+                    api.Submit(uut);
+                }
+            }
+            return null;
         }
 
         public void CleanUp()
