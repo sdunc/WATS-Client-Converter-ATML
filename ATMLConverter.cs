@@ -434,18 +434,14 @@ namespace ATMLConverter
         private void GetStrLimits(XElement testLimits, out string limit, out CompOperatorType compOp)
         {
             compOp = CompOperatorType.LOG;
-            limit = "";
+            limit = string.Empty;
             if (testLimits?.Element(tr + "Limits").Element(c + "Expected") != null)
             {
                 string strCompOp = testLimits.Element(tr + "Limits").Element(c + "Expected").Attribute("comparator").Value;
-                if (strCompOp == "CIEQ")
-                    compOp = CompOperatorType.IGNORECASE;
-                else
-                    compOp = CompOperatorType.CASESENSIT;
+                compOp = strCompOp == "CIEQ" ? CompOperatorType.IGNORECASE : CompOperatorType.CASESENSIT;
                 limit = testLimits.Element(tr + "Limits").Element(c + "Expected").Element(c + "Datum").Element(c + "Value").Value;
             }
         }
-
 
         private void SetStepProperties(XElement prop, Step step)
         {
