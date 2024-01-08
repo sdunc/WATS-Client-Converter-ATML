@@ -14,9 +14,7 @@ namespace ATMLConverter
 {
     public class ATMLConverter : IReportConverter_v2
     {
-        public void CleanUp()
-        {
-        }
+
 
         Dictionary<string, string> arguments = new Dictionary<string, string>
         {
@@ -506,7 +504,6 @@ namespace ATMLConverter
             return uutReport;            
         }
 
-
         private UUTReport CreateReport(TDM api, ATML50.schema.TestResults testResults)
         {
 
@@ -525,6 +522,11 @@ namespace ATMLConverter
             var testStation = (ATML202.schema.ItemDescription)testResults.TestStation.Item;
             uutReport.StationName = testResults.TestStation.SerialNumber;
             return uutReport;
+        }
+
+        public void CleanUp()
+        {
+            // Note(srd): Required for IReportConverter_v2.
         }
 
         internal enum iconNames
