@@ -20,9 +20,9 @@ namespace ATMLConverter
         {
             arguments = args;
         }
-        
+
         XNamespace trc, tr, ts, xsi, c;
-        
+
         public Dictionary<string, string> ConverterParameters => arguments;
         Dictionary<string, string> arguments = new Dictionary<string, string>
         {
@@ -72,7 +72,7 @@ namespace ATMLConverter
                 throw new NotSupportedException("Unsupported ATML Format. Supported formats: 2.02,5.0,6.01");
             }
         }
-        
+
         void ProcessResultSet(TDM api, UUTReport uut, XElement testResults)
         {
             SequenceCall currentSequence = uut.GetRootSequenceCall();
@@ -114,7 +114,7 @@ namespace ATMLConverter
                 currentSequence.Name = splitName[1];
             else
                 currentSequence.Name = "";
-            
+
             SetStepProperties(element.Element(tr + "Extension").Element(ts + "TSStepProperties"), currentSequence);
             currentSequence.Status = GetOutcome(element.Element(tr + "Outcome"));
             foreach (XElement subElement in element.Elements())
@@ -187,7 +187,7 @@ namespace ATMLConverter
                                 {
                                     string strValue = strTestResult.Element(tr + "TestData")?.Element(c + "Datum")?.Element(c + "Value")?.Value ?? "";
                                     string strLimit; CompOperatorType strCompOp;
-                                    
+
                                     //Check if step is set to or defaulted to Done. Set test as passed if this is true or Step will throw an exception.
                                     StepStatusType testOutcome = stepOutcome == StepStatusType.Done ? StepStatusType.Passed : stepOutcome;
 
@@ -257,7 +257,6 @@ namespace ATMLConverter
                                 // Note(srd): Can we handle any random step in a generic way?
                                 // Need to define step so it is not null to be handled in the next 2 conditionals and uploaded.
                                 break;
-
                         }
                         if (step != null) step.Status = stepOutcome;
                     }
@@ -279,7 +278,7 @@ namespace ATMLConverter
                         //}
                     }
 
-                   
+
                     //TODO: ErrorCode, ErrorMessage....
                 }
             }
@@ -322,13 +321,20 @@ namespace ATMLConverter
 
         StepStatusType GetOutcome(XElement outcome)
         {
-            string value = outcome.Attribute("value").Value.Replace("NotStarted", "Skipped");
-            if (value == "UserDefined" || value == "Aborted")
-                value = outcome.Attribute("qualifier").Value;
-            if (Enum.TryParse(value, out StepStatusType sst))
-                return sst;
-            else
+            try
+            {
+                string value = outcome.Attribute("value").Value.Replace("NotStarted", "Skipped");
+                if (value == "UserDefined" || value == "Aborted")
+                    value = outcome.Attribute("qualifier").Value;
+                if (Enum.TryParse(value, out StepStatusType sst))
+                    return sst;
+                else
+                    return StepStatusType.Done;
+            }
+            catch
+            {
                 return StepStatusType.Done;
+            }
         }
 
         UUTStatusType GetUUTOutCome(XElement outcome)
@@ -429,7 +435,7 @@ namespace ATMLConverter
                 GetArgument("operationTypeCode"),
                 testResults.Element(tr + "ResultSet")?.Attribute("name").Value,
                 GetArgument("sequenceVersion"));
-            uutReport.StartDateTime= DateTime.ParseExact(testResults.Element(tr + "ResultSet")?.Attribute("startDateTime").Value, "yyyy-MM-ddTHH:mm:ss.FFFFF", CultureInfo.InvariantCulture);
+            uutReport.StartDateTime = DateTime.ParseExact(testResults.Element(tr + "ResultSet")?.Attribute("startDateTime").Value, "yyyy-MM-ddTHH:mm:ss.FFFFF", CultureInfo.InvariantCulture);
             DateTime endDateTime = DateTime.ParseExact(testResults.Element(tr + "ResultSet")?.Attribute("endDateTime").Value, "yyyy-MM-ddTHH:mm:ss.FFFFF", CultureInfo.InvariantCulture);
             uutReport.ExecutionTime = (endDateTime - uutReport.StartDateTime).TotalSeconds;
             uutReport.StationName = testResults.Element(tr + "TestStation").Element(c + "SerialNumber").Value;
@@ -463,7 +469,7 @@ namespace ATMLConverter
                     }
                 }
             }
-            return uutReport;            
+            return uutReport;
         }
 
         UUTReport CreateReport(TDM api, ATML50.schema.TestResults testResults)
@@ -484,7 +490,7 @@ namespace ATMLConverter
             uutReport.StationName = testResults.TestStation.SerialNumber;
             return uutReport;
         }
-        
+
         public Report ImportReport(TDM api, Stream file)
         {
             api.TestMode = TestModeType.Import;
