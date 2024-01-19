@@ -321,20 +321,16 @@ namespace ATMLConverter
 
         StepStatusType GetOutcome(XElement outcome)
         {
-            try
-            {
-                string value = outcome.Attribute("value").Value.Replace("NotStarted", "Skipped");
-                if (value == "UserDefined" || value == "Aborted")
-                    value = outcome.Attribute("qualifier").Value;
-                if (Enum.TryParse(value, out StepStatusType sst))
-                    return sst;
-                else
-                    return StepStatusType.Done;
-            }
-            catch
-            {
+            if (outcome == null)
                 return StepStatusType.Done;
-            }
+
+            string value = outcome.Attribute("value")?.Value.Replace("NotStarted", "Skipped");
+            if (value == "UserDefined" || value == "Aborted")
+                value = outcome.Attribute("qualifier")?.Value;
+            if (Enum.TryParse(value, out StepStatusType sst))
+                return sst;
+            else
+                return StepStatusType.Done;
         }
 
         UUTStatusType GetUUTOutCome(XElement outcome)
